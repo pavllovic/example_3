@@ -1,0 +1,27 @@
+include ../menu-category/menu-category.pug
+include ../link/link.pug
+footer(class='footer')
+  section(class='footer--nav')
+    h3(class='footer--header') навигация
+    - 
+      var category = [
+        {href: './catalog.html', text: 'Кухни'},
+        {href: './catalog.html', text: 'Спальни'},
+        {href: './catalog.html', text: 'Гостинные'},
+        {href: './catalog.html', text: 'Прихожие'},
+        {href: './catalog.html', text: 'Офисная мебель'},
+        {href: './catalog.html', text: 'Детская'},
+        {href: './catalog.html', text: 'Матрасы'},
+        {href: './catalog.html', text: 'Мягкая мебель'},
+        {href: './catalog.html', text: 'Шкафы'}
+      ]
+    +menu-category(category)
+  div(class='footer--address')
+    include ../logo/logo-font.pug
+    address
+      span г. Анапа, Анапское шоссе,
+      span 30 Ж/К Черное море
+  div(class='footer--bottom')
+    +link({href: './catalog.html', icon: 'stock', text: 'Акция'},)
+    +link({href: './catalog.html', icon: 'new', text: 'Новинки'})
+    include ../contact-list/contact-list.pug

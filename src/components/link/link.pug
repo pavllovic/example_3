@@ -1,0 +1,10 @@
+mixin link(link)
+  a(class=(link.icon === 'new' || link.icon === 'stock') ? `link link_${link.icon}` : 'link' href=`${link.href}`)
+    if link.icon
+      span(class='link--icon' aria-hidden='true')
+        +icon(link.icon)
+    if link.text
+      span(class='link--txt') #{link.text}
+    if link.ally
+      span(class='visually-hidden') #{link.ally}
+

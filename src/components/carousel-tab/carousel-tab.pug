@@ -1,0 +1,32 @@
+include ../icon/icon.pug
+section(class='carousel-tab' id='carousel-product' 
+        aria-label='карусель фотографий' aria-roledescription='carousel')    
+  div(class='carousel-tab--slide-list' id='carousel-tab--slide-list')
+    - for(var x = 1; x <= 5; x++)
+      div(class=`carousel-tab--slide ${x === 1? 'is-active' : ''}` id=`slide-${x}` role='tabpanel' aria-label=`${x} из 4` data-carousel='slide')
+        picture
+          source(srcset=`${require(`Images/product/7/slide/${x}-332w.webp`).default} 332w,
+                         ${require(`Images/product/7/slide/${x}-663w.webp`).default} 663w,
+                         ${require(`Images/product/7/slide/${x}-1326w.webp`).default} 1326w`
+                sizes='(min-width: 720px) 663px , calc(100vw - var(--layout-h-space) * 2 - 2.4rem)'
+                type='image/webp') 
+          source(srcset=`${require(`Images/product/7/slide/${x}-332w.jpg`).default} 332w,
+                         ${require(`Images/product/7/slide/${x}-663w.jpg`).default} 663w,
+                         ${require(`Images/product/7/slide/${x}-1326w.jpg`).default} 1326w`
+                sizes='(min-width: 720px) 663px , calc(100vw - var(--layout-h-space) * 2 - 2.4rem)'
+                type='image/jpg') 
+          img(src=require(`Images/product/7/slide/${x}-663w.jpg`).default width='663' height='276' alt='дивный диван')
+  div(class='carousel-tab--bottom')
+    button(class='carousel-tab--control carousel-tab--control_prev' type='button' data-carousel='prev-slide'
+          aria-label='предыдущий слайд' aria-controls='carousel-tab--slide-list')
+      +icon('arrow2')
+    div(class='carousel-tab--tablist' id='carousel-tab--tablist' role='tablist' aria-label='табы выбора фотографий')
+      - for(var x = 1; x <= 5; x++)
+        button(class='carousel-tab--tab' type='button' role='tab' aria-controls=`slide-${x}` aria-label=`таб ${x}`
+                  aria-selected=`${x === 1 ? 'true' : 'false'}` tabindex=`${x === 1 ? '0' : '-1'}`)
+          picture 
+            source(srcset=`${require(`Images/product/7/thumb/${x}-204w.webp`).default}` type='image/webp')  
+            img(src=require(`Images/product/7/thumb/${x}-204w.jpg`).default width='120' height='90' aria-hidden='true' alt='')
+    button(class='carousel-tab--control carousel-tab--control_next' type='button' data-carousel='next-slide'
+          aria-label='следующий слайд' aria-controls='carousel-tab--slide-list')
+      +icon('arrow2')

@@ -1,0 +1,15 @@
+@import './header-links--item.css';
+
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.header-links .link {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.header-links .link--icon {
+  height: 2.7rem;
+}

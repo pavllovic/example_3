@@ -1,0 +1,6 @@
+@import './breadcrumbs--item.css';
+@import './breadcrumbs--link.css';
+
+.breadcrumbs {
+  display: flex;
+}

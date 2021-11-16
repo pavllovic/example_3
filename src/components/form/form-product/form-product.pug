@@ -1,0 +1,19 @@
+mixin form-product(product)
+  include ../../icon/icon.pug  
+  include ../combobox/combobox.pug  
+  include ../combobox/combobox-size.pug  
+  include ../combobox/combobox-color.pug  
+  form(class='form-product' name='form-product' action='' method='POST' enctype='application/x-www-form-urlencoded')
+    span(class='form-product--price') #{formattPrice(product.price)}₽
+    button(class='btn' type='submit') Купить
+    include ../../btn-like/btn-like.pug
+    fieldset(class='form-product--controls')
+      label(class='form-product--label') 
+        span Цвет
+        +combobox-color(product.color, 'color', 'product-color')
+      label(class='form-product--label') 
+        span Количество
+        +combobox([1,2,3,4], 'count', 'product-count')
+      label(class='form-product--label') 
+        span Размер (Д × Ш × В)
+        +combobox-size(product.size, 'size', 'product-size')

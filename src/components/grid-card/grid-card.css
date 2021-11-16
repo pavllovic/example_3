@@ -1,0 +1,6 @@
+@import './grid-card--item.css';
+@import './grid-card--grid.css';
+
+.grid-card {
+  width: 100%;
+}

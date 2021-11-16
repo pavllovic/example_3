@@ -1,0 +1,167 @@
+extends ./layout/base.pug
+
+block preload
+  link(rel="preload" as='image' href=require('Images/about/hero-633w.webp').default
+      imagesrcset=`${require('Images/about/hero-317w.webp').default} 317w,
+                   ${require('Images/about/hero-633w.webp').default} 633w,
+                   ${require('Images/about/hero-1266w.webp').default} 1266w`
+      imagesizes='(max-width: 425px) 317px, 633px')
+
+block styles
+  style.
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-400.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-400.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-500.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-500.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-700.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-700.woff').default}) format('woff');
+    }
+
+block content
+  div(class='wrap')
+    include ../components/header/header.pug
+  main(class='wrap-about')
+    section(class='about-hero')
+      div(class='about-hero--img')
+        picture
+          source(srcset=`${require('Images/about/hero-317w.webp').default} 317w,
+                          ${require('Images/about/hero-633w.webp').default} 633w,
+                          ${require('Images/about/hero-1266w.webp').default} 1266w`
+                  sizes='(max-width: 425px) 317px, 633px'
+                  type='image/webp')
+          source(srcset=`${require('Images/about/hero-317w.png').default} 317w,
+                          ${require('Images/about/hero-633w.png').default} 633w,
+                          ${require('Images/about/hero-1266w.png').default} 1266w`
+                  sizes='(max-width: 425px) 317px, 633px'
+                  type='image/png')
+          img(src=require('Images/about/hero-633w.png').default alt='диван' width='633' height='339')
+      div(class='about-hero--txt')
+        span(class='about--label') О магазине
+        h1(class='about--heading') Интернет-магазин «ЛофтМебель»: купите хорошую мебель в один клик!
+        p(class='about--txt').
+          Уникальный формат интернет-магазина позволит вам купить лучшую мебель крупнейших российских фабрик максимально быстро и по выгодной цене!
+        p(class='about--txt').
+          Мы благодарим за доверие более десятка производителей, которые дали нам возможность представлять лучшие образцы их продукции в российском интернет-пространстве. 
+          Прямые договоры на поставку мебели с фабрик обеспечивают наиболее привлекательные условия для наших покупателей.
+    section(class='about-feature')
+      h2(class='about--heading') Покупайте с выгодой!
+      div(class='about-feature--item')
+        span(class='about-feature--icon' aria-hidden='true')
+          include ./../images/icon/profit.svg
+        div
+          h3(class='about--subheading') Лучшая цена
+          p(class='about--txt').
+            Предлагаем близкие к оптовым цены, которые дают возможность приобретать мебель дешевле, чем в розничных салонах и шоу-румах.
+      div(class='about-feature--item')
+        span(class='about-feature--icon' aria-hidden='true')
+          include ./../images/icon/auto.svg
+        div
+          h3(class='about--subheading') Прямые поставки
+          p(class='about--txt').
+            С ведущих мебельных фабрик уменьшают срок выполнения вашего заказа, даже если речь идет об изготовлении предметов по индивидуальному проекту.
+      div(class='about-feature--item')
+        span(class='about-feature--icon' aria-hidden='true')
+          include ./../images/icon/time.svg
+        div
+          h3(class='about--subheading') Экономие времени
+          p(class='about--txt').
+            Не нашли оптимальный вариант или нет времени на поиски? Оставьте онлайн-заявку с критериями, и мы предложим вам несколько достойных образцов.
+      div(class='about-feature--item')
+        span(class='about-feature--icon' aria-hidden='true')
+          include ./../images/icon/prod.svg
+        div
+          h3(class='about--subheading') Изготовление на заказ
+          p(class='about--txt').
+            Принимаем заявки на изготовление мебели по персональному дизайн-проекту от покупателей из любой точки России. Просим быть готовыми к авансированной оплате персональных заказов.
+    section(class='about-info')  
+      div(class='about-info--item')
+        h3(class='about--subheading') Самые «вкусные» предложения
+        p(class='about--txt').
+          Мы делаем всё необходимое, чтобы покупатели получали доступ к актуальным новинкам, которые представляет российский мебельный рынок. 
+          Познакомиться с каждой моделью, сравнить цены на аналоги и выбрать лучшее вы можете прямо сейчас. Хотите первыми узнавать о самых выгодных предложениях? 
+          Тогда подписывайтесь на информационную рассылку!
+      div(class='about-info--item')
+        h3(class='about--subheading') Гарантированное качество
+        p(class='about--txt').
+          Вся продукция сопровождается гарантией производителя. В каталогах представлена только сертифицированная мебель. 
+          Собственный контроль качества тщательно проверяет каждый образец перед отправкой заказчику. Покупатели получают необходимые документы –гарантийный талон и чек.
+      div(class='about-info--item')
+        h3(class='about--subheading') Впечатляющий ассортимент
+        p(class='about--txt').
+          Ежедневно мы выбираем для наших каталогов идеальные образцы из товарной матрицы производителей по всей России. 
+          Модные расцветки, экологически безопасные материалы, надежные комплектующие – у нас вы найдете мебель своей мечты!
+    section(class='about-card')
+      div(class='about-card--item')
+        span(class='about-card--icon' aria-hidden='true')
+          include ./../images/icon/coop.svg
+        h3(class='about--subheading') Особенные условия для оптовиков
+        p(class='about--txt').
+          Число наших оптовых покупателей неуклонно возрастает и всё потому, что мы сумели предложить владельцам мебельных магазинов наиболее выгодные условия.
+      div(class='about-card--item')
+        span(class='about-card--icon' aria-hidden='true')
+          include ./../images/icon/box.svg
+        h3(class='about--subheading') Оперативная доставка
+        p(class='about--txt').
+          Собственная курьерская служба быстро привезет купленную мебель по указанному адресу. 
+          В российские регионы доставка осуществляется силами транспортных компаний.
+      div(class='about-card--item')
+        span(class='about-card--icon' aria-hidden='true')
+          include ./../images/icon/support.svg
+        h3(class='about--subheading') Внимательный сервис
+        p(class='about--txt').
+          Квалифицированные менеджеры интернет-магазина ответят на все вопросы по ассортименту и предоставляемым возможностям, 
+          а также помогут оформить заказ и проконтролируют реализацию клиентских пожеланий при заказе мебели.
+      div(class='about-card--item')
+        span(class='about-card--icon' aria-hidden='true')
+          include ./../images/icon/re.svg
+        h3(class='about--subheading') Каждый пятый покупатель заказывает у нас повторно! 
+        p(class='about--txt').
+          И мы благодарим всех, кто воспользовался нашим уникальным предложением, заказал мебель быстро и недорого и порекомендовал друзьям и знакомым.
+    section(class='about-aside')
+      h2(class='about--heading') Мы поможем сэкономить время, силы и деньги!
+      div(class='about-aside--item')
+        span(class='about-aside--icon' aria-hidden='true')
+          include ./../images/icon/check.svg
+        div
+          h3(class='about--title') Время.
+          p(class='about--txt').
+            Примем вашу заявку в кротчайшие сроки. При необходимости подберем для вас достойные варианты по заданным критериям.
+      div(class='about-aside--item')
+        span(class='about-aside--icon' aria-hidden='true')
+          include ./../images/icon/check.svg
+        div
+          h3(class='about--title') Силы.
+          p(class='about--txt').
+            Закупим оптом или закажем на фабрике, избавив от длительных обсуждений заказа с исполнителем. Курируем все этапы работы над заказом.
+      div(class='about-aside--item')
+        span(class='about-aside--icon' aria-hidden='true')
+          include ./../images/icon/check.svg
+        div
+          h3(class='about--title') Деньги.
+          p(class='about--txt').
+            Вы точно купите мебель дешевле, чем в розницу.
+    p(class='about--heading'). 
+      На чем мы не экономим?<br/> 
+      На вашем комфорте и качестве мебели!
+  include ../components/footer/footer.pug
+  include ../components/icon/sprite-pages.svg
+  include ../components/icon/sprite-menu-type.svg
+  include ../components/icon/sprite-controls.svg
+  include ../components/icon/sprite-contact.svg

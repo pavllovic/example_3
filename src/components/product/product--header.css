@@ -1,0 +1,13 @@
+.product--header {
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: 48em) {
+  .product--header {
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+  }
+}

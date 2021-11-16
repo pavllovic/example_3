@@ -1,0 +1,22 @@
+.link--icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.link--icon svg {
+  display: flex;
+  width: auto;
+  height: 100%;
+  fill: var(--color-text);
+}
+
+.link_stock .link--icon svg {
+  fill: var(--color-accent);
+}
+
+.link_new .link--icon svg {
+  fill: var(--color-accent-second);
+}

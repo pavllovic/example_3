@@ -1,0 +1,20 @@
+.card--bottom {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 0 0.5rem;
+  margin-top: 1.5rem;
+  background-color: var(--bg-light);
+}
+
+@media (min-width: 48em) {
+  .card--bottom {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .card--bottom {
+    padding: 0 2rem;
+  }
+}

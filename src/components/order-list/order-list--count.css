@@ -1,0 +1,11 @@
+.order-list--count {
+  margin-left: auto;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 48em) {
+  .order-list--count {
+    font-size: 1.6rem;
+  }
+}

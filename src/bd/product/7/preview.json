@@ -1,0 +1,21 @@
+{
+  "name": "Динс Velvet Yellow",
+  "type": "Диваны",
+  "alt": "диван",
+  "num": "7",
+  "stock": 25,
+  "price": 28490,
+  "old_price": 37990,
+  "rating": 4,
+  "size": [
+    {"width": "43", "depth": "43", "height": "77"},
+    {"width": "145", "depth": "120", "height": "77"},
+    {"width": "234", "depth": "170", "height": "100"}
+  ],
+  "color": [
+    {"name": "желтый", "value": "#FFC107"},
+    {"name": "красный", "value": "#E94848"},
+    {"name": "зеленый", "value": "#43BF57"}
+  ],
+  "href": "product"
+}

@@ -1,0 +1,13 @@
+.hero-txt--aside {
+  max-width: 11em;
+  margin-top: 0.5em;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.03;
+}
+
+@media (min-width: 48em) {
+  .hero-txt--aside {
+    display: none;
+  }
+}

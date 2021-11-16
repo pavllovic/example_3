@@ -1,0 +1,13 @@
+.card-meta--name {
+  margin-bottom: 0.8rem;
+  color: hsl(0, 0%, 77%);
+  font-size: 0.8rem;
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+@media (min-width: 48em) {
+  .card-meta--name {
+    font-size: 0.9rem;
+  }
+}

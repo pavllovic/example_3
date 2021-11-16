@@ -1,0 +1,13 @@
+.order-table--img {
+  width: 4rem;
+  height: auto;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+@media (min-width: 48em) {
+  .order-table--img {
+    width: 5.4rem;
+    margin-right: 1.5rem;
+  }
+}

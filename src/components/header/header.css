@@ -1,0 +1,54 @@
+@import './header--logo.css';
+
+.header {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.header .header-links {
+  display: none;
+}
+
+.header .user-bar {
+  margin-left: auto;
+}
+
+@media (min-width: 48em) {
+  .header {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .header .header-links {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .header .header-links .header-links--item:not(:last-child) {
+    display: none;
+  }
+
+  .header .user-bar {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .header .header-links .header-links--item:not(:last-child) {
+    display: block;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .header {
+    padding-top: 4.5rem;
+  }
+
+  .header .logo {
+    order: -1;
+  }
+}

@@ -1,0 +1,52 @@
+extends ./layout/base.pug
+
+block preload
+
+block styles
+  style.
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-400.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-400.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-500.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-500.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-700.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-700.woff').default}) format('woff');
+    }
+
+block content
+  - var current_page = 'cart'
+  div(class='wrap wrap-cart')
+    include ../components/header/header.pug
+    include ../components/category/category.pug
+    include ../components/breadcrumbs/breadcrumbs.pug
+    +breadcrumbs([
+      {text: 'главная', href: './index.html'},
+      {text: 'корзина', href: './cart.html', current: 'page'}
+    ])
+    include ../components/order-list/order-list.pug
+    +order-list([1,2,3,4])
+    section(class='offer-list-box')
+      h2(class='subheading') Вам может понравиться
+      include ../components/grid-offer/grid-offer.pug
+      +grid-offer([3,14,9,15])
+  include ../components/footer/footer.pug
+  include ../components/icon/sprite-pages.svg
+  include ../components/icon/sprite-menu-type.svg
+  include ../components/icon/sprite-controls.svg
+  include ../components/icon/sprite-contact.svg

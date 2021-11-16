@@ -1,0 +1,21 @@
+.order--price {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.order--price_old {
+  margin-right: 1.5rem;
+  color: hsl(0, 0%, 80%);
+  text-decoration: line-through;
+}
+
+@media (min-width: 48em) {
+  .order--price {
+    font-size: 1.6rem;
+  }
+
+  .order--price_old {
+    font-size: 1.2rem;
+  }
+}

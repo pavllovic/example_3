@@ -1,0 +1,14 @@
+include ../icon/icon.pug
+include ../link/link.pug
+
+- 
+  pages = [
+    {href: './index.html', icon: 'index', text: 'Главная'},
+    {href: './about.html', icon: 'about', text: 'О нас'},
+    {href: './contact.html', icon: 'contact', text: 'Контакты'}
+  ]
+
+ul(class='menu-page')
+  each item in pages
+    li(class='menu-page--item')
+      +link(item)

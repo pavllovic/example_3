@@ -1,0 +1,21 @@
+{
+  "name": "Хамид Карзай",
+  "type": "Стелажи",
+  "alt": "Стелаж",
+  "num": "5",
+  "stock": 10,
+  "price": 11990,
+  "old_price": 13600,
+  "rating": 4,
+  "size": [
+    {"width": "43", "depth": "43", "height": "77"},
+    {"width": "145", "depth": "120", "height": "77"},
+    {"width": "234", "depth": "170", "height": "100"}
+  ],
+  "color": [
+    {"name": "бежевый", "value": "#CCBEB1"},
+    {"name": "красный", "value": "#E94848"},
+    {"name": "зеленый", "value": "#43BF57"}
+  ],
+  "href": "product"
+}

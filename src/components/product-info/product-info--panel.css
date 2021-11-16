@@ -1,0 +1,15 @@
+.product-info--panel {
+  opacity: 0;
+  transition-delay: 0s, 0.15s;
+  transition-duration: 0.15s, 0s;
+  transition-property: opacity, visibility;
+  transition-timing-function: ease-in, ease-in;
+  visibility: hidden;
+}
+
+.product-info--panel[tabindex='0'] {
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+  transition-duration: 0.15s, 0s;
+  visibility: visible;
+}

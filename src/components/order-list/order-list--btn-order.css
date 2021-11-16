@@ -1,0 +1,11 @@
+.order-list--btn-order {
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 48em) {
+  .order-list--btn-order {
+    margin: 0;
+  }
+}

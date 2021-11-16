@@ -1,0 +1,99 @@
+@import './nav--btn/nav--btn.css';
+@import './nav--btn-close/nav--btn-close.css';
+@import './nav--menu.css';
+@import './nav--header.css';
+
+.nav {
+  margin-right: 1.8rem;
+}
+
+.nav .header-links {
+  display: none;
+}
+
+@media (max-width: 87.49em) {
+  .nav .menu-page,
+  .nav .menu-category {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav .menu-category--item {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .nav .menu-page .link,
+  .nav .menu-category .link {
+    position: relative;
+    display: grid;
+    width: 100%;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-right: calc(2.5rem + 35px);
+    padding-bottom: 1.5rem;
+    padding-left: 2.5rem;
+    color: inherit;
+    column-gap: 1.8rem;
+    font-family: inherit;
+    font-size: 1.3rem;
+    grid-template-columns: 1.9rem 1fr;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .nav .menu-page .link--icon,
+  .nav .menu-category .link--icon {
+    height: 1.4rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav .menu-page .link--txt,
+  .nav .menu-category .link--txt {
+    padding: 0;
+  }
+
+  .nav .menu-page .link--txt::before,
+  .nav .menu-category .link--txt::before {
+    display: none;
+  }
+
+  .nav .menu-page .link::before,
+  .nav .menu-category .link::before {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f1f1f1, rgba(238, 246, 250, 0.19) 82.82%, rgba(237, 248, 252, 0) 107.25%);
+    content: '';
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: 0.25s transform ease-in;
+  }
+
+  .nav .menu-page .link:hover::before,
+  .nav .menu-category .link:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+@media (min-width: 87.5em) {
+  .nav {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .nav .menu-page {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3rem;
+  }
+
+  .nav .menu-category,
+  .nav .link::before,
+  .nav .menu-page .link--icon {
+    display: none;
+  }
+}

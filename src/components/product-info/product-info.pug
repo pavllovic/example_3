@@ -1,0 +1,12 @@
+mixin product-info(meta, review)  
+  section(class='product-info' id='product-info')
+    div(class='product-info--tablist' id='tablist' role='tablist' aria-label='информация о продукте')
+      button(class='product-info--tab' type='button' role='tab' tabindex='0' aria-selected='true' aria-controls='meta-panel' id='meat-tab') Характеристики
+      button(class='product-info--tab' type='button' role='tab' tabindex='-1' aria-selected='false' aria-controls='review-panel' id='review-tab') Отзывы
+      button(class='product-info--tab' type='button' role='tab' tabindex='-1' aria-selected='false' aria-controls='payment-panel' id='payment-tab') Доставка и оплата
+    div(class='product-info--panellist')
+      div(class='product-info--panel' id='meta-panel' tabindex='0' role='tabpanel' aria-labelledby='meta-tab')
+        include ./product-info--meta/product-info--meta.pug
+        +product-info--meta(meta)
+      div(class='product-info--panel' id='review-panel' tabindex='-1' role='tabpanel' aria-labelledby='review-tab')
+      div(class='product-info--panel' id='payment-panel' tabindex='-1' role='tabpanel' aria-labelledby='payment-tab')

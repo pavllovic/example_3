@@ -1,0 +1,20 @@
+.order--badge {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.order--badge_stock svg {
+  width: auto;
+  height: 1.7rem;
+  margin-right: 0.7rem;
+  fill: var(--color-accent);
+}
+
+@media (min-width: 48em) {
+  .order--badge {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,16 @@
+@import './btn-like--icon.css';
+@import './btn-like--txt.css';
+
+.btn-like {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transform-origin: center;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}

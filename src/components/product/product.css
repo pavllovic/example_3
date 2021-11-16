@@ -1,0 +1,11 @@
+@import './product--header.css';
+@import './product--subheading.css';
+@import './product--descript.css';
+@import './product--category.css';
+@import './product--rating.css';
+@import './product--rating-icon.css';
+
+.product {
+  display: flex;
+  flex-direction: column;
+}

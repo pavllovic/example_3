@@ -1,0 +1,29 @@
+include ../menu-category/menu-category.pug
+include ../icon/icon.pug
+- 
+  var category = [
+    {href: './catalog.html', icon: 'kitchen', text: 'Кухни'},
+    {href: './catalog.html', icon: 'bedroom', text: 'Спальни'},
+    {href: './catalog.html', icon: 'livingroom', text: 'Гостинные'},
+    {href: './catalog.html', icon: 'closet', text: 'Прихожие'},
+    {href: './catalog.html', icon: 'office', text: 'Офисная мебель'},
+    {href: './catalog.html', icon: 'childrensroom', text: 'Детская'},
+    {href: './catalog.html', icon: 'stock', text: 'Акция'},
+    {href: './catalog.html', icon: 'new', text: 'Новинки'},
+    {href: './catalog.html', icon: 'mattress', text: 'Матрасы'},
+    {href: './catalog.html', icon: 'armchair', text: 'Мягкая мебель'},
+    {href: './catalog.html', icon: 'cupboard', text: 'Шкафы'}
+  ]
+
+nav(class='nav' aria-label='main navigation')
+  include ./nav--btn/nav--btn.pug
+  div(class='nav--menu' id='menu')
+    include ./nav--btn-close/nav--btn-close.pug
+    div(class='nav--header') 
+      span Меню
+    include ../menu-page/menu-page.pug
+    div(class='nav--header') 
+      span Категории
+    +menu-category(category)
+  include ../header-links/header-links.pug
+    

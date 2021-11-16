@@ -1,0 +1,77 @@
+@import './common.css';
+@import '../components/form/form-message/form-message.css';
+@import '../components/contact-list/contact-list.css';
+@import '../components/ymap/ymap.css';
+@import '../components/breadcrumbs/breadcrumbs.css';
+
+.wrap-contact .breadcrumbs {
+  margin-bottom: 3rem;
+}
+
+.wrap-contact .subheading {
+  width: 100%;
+}
+
+.wrap-contact .contact-box .subheading,
+.wrap-contact .ymap-box .subheading {
+  margin-bottom: 2rem;
+}
+
+.wrap-contact .form-message {
+  margin-bottom: 4.5rem;
+}
+
+.wrap-contact .contact-box,
+.wrap-contact .ymap-box {
+  margin-bottom: 4rem;
+}
+
+.wrap-contact .contact-list {
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+@media (min-width: 48em) {
+  .wrap-contact .breadcrumbs {
+    margin-bottom: 4rem;
+  }
+
+  .wrap-contact .contact--box .subheading {
+    margin-bottom: 3.5rem;
+  }
+
+  .wrap-contact .ymap-box .subheading {
+    margin-bottom: 3rem;
+  }
+
+  .wrap-contact .form-message {
+    margin-bottom: 5rem;
+  }
+
+  .wrap-contact .ymap-box {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .wrap-contact .form-message {
+    width: 45.7rem;
+    margin-right: 10rem;
+    margin-bottom: 0;
+  }
+
+  .wrap-contact .contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+  }
+
+  .wrap-contact .contact-list {
+    transform: translateY(1.9rem);
+  }
+
+  .wrap-contact .ymap-box {
+    margin-bottom: 7rem;
+  }
+}

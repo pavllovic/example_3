@@ -1,0 +1,31 @@
+.menu-category--link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.23;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-category--item_stock .menu-category--link {
+  color: var(--color-accent);
+}
+
+@media (min-width: 48em) {
+  .menu-category--link {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    font-size: 1.4rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .menu-category--link {
+    font-size: 1.6rem;
+  }
+}

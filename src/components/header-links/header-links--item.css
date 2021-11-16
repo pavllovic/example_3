@@ -1,0 +1,9 @@
+.header-links--item:not(:last-child) {
+  margin-right: 4px;
+}
+
+@media (min-width: 48em) {
+  .header-links--item:not(:last-child) {
+    margin-right: 14px;
+  }
+}

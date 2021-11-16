@@ -1,0 +1,68 @@
+.form-product .combobox--input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1rem;
+  padding-right: 4rem;
+  background: transparent;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.form-product .combobox-count .combobox--input {
+  width: 6rem;
+  font-weight: 500;
+}
+
+.form-product .combobox-color .combobox--input {
+  --bg-color: transparent;
+
+  width: 6rem;
+  color: transparent;
+  user-select: none;
+}
+
+/* layer under combobox--input */
+.form-product .combobox--input::before {
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 3rem);
+  height: 100%;
+  background: transparent;
+  box-shadow: var(--shadow-main);
+  content: '';
+}
+
+/* --------------------------------------------------------- *
+  js set value for --bg-color when select option in combobox.
+  layer under combobox--input has background = --bg-color.
+* --------------------------------------------------------- */
+.form-product .combobox-color .combobox--input::before {
+  background-color: var(--bg-color);
+}
+
+/* arrow when combobox closed */
+.form-product .combobox--input::after {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  display: block;
+  width: 3rem;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpolygon points='6.34 12 0 5.99 6.34 0 8 1.56 3.31 5.99 8 10.43 6.34 12'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.4rem;
+  content: '';
+  transform: rotateZ(270deg);
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transition-timing-function: ease;
+}
+
+/* arrow when combobox opened */
+.form-product .combobox.is-active .combobox--input::after {
+  transform: rotateZ(-270deg);
+}

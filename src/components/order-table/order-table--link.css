@@ -1,0 +1,9 @@
+.order-table--link {
+  display: block;
+  width: max-content;
+  margin-top: 2rem;
+  margin-left: auto;
+  color: var(--color-main);
+  font-size: 1.2rem;
+  text-decoration: none;
+}

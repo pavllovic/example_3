@@ -1,0 +1,42 @@
+.card--img {
+  position: relative;
+  width: 100%;
+  padding-top: calc((100% - 4rem) / 100 * 75);
+  margin-top: 0.8rem;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+}
+
+.card--img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+
+@media (min-width: 48em) {
+  .card--img {
+    padding-top: calc((100% - 3rem) / 100 * 75);
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .card--img {
+    padding-top: calc((100% - 6rem) / 100 * 75);
+    margin-top: 3.3rem;
+    margin-bottom: 5.4rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .card--img {
+    padding-top: calc((100% - 2.2rem) / 100 * 75);
+  }
+}

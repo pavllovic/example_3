@@ -1,0 +1,21 @@
+{
+  "name": "Кускен Navy Blue",
+  "type": "Диваны",
+  "alt": "диван",
+  "num": "1",
+  "stock": false,
+  "price": 2300,
+  "old_price": false,
+  "rating": 4,
+  "size": [
+    {"width": "43", "depth": "43", "height": "77"},
+    {"width": "145", "depth": "120", "height": "77"},
+    {"width": "234", "depth": "170", "height": "100"}
+  ],
+  "color": [
+    {"name": "темно - синий", "value": "#353E4D"},
+    {"name": "красный", "value": "#E94848"},
+    {"name": "зеленый", "value": "#43BF57"}
+  ],
+  "href": "product" 
+}

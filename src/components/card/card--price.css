@@ -1,0 +1,35 @@
+.card--price {
+  margin-top: 0.25rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.17;
+}
+
+.card--price_old {
+  margin-left: 0.6rem;
+  color: hsl(0, 0%, 80%);
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+@media (min-width: 48em) {
+  .card--price {
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  .card--price_old {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .card--price {
+    margin-top: 0.9rem;
+    font-size: 1.6rem;
+  }
+
+  .card--price_old {
+    font-size: 1.2rem;
+  }
+}

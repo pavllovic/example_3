@@ -1,0 +1,7 @@
+.carousel-tab--slide-list {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}

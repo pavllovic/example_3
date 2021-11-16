@@ -1,0 +1,58 @@
+@import './contact-list--item.css';
+@import './contact-list--address.css';
+
+.contact-list {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 1rem;
+}
+
+.contact-list .link {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.contact-list .contact-list--item_inst .link {
+  text-transform: uppercase;
+}
+
+.contact-list .link--icon {
+  height: 2.1rem;
+}
+
+@media (min-width: 48em) {
+  .contact-list {
+    justify-content: flex-start;
+    column-gap: 3.5rem;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 1.5rem;
+  }
+
+  .contact-list .contact-list--item_address {
+    grid-column: 1/4;
+  }
+
+  .contact-list .link {
+    font-size: 1.4rem;
+  }
+
+  .contact-list .contact-list--item_inst .link {
+    font-size: 1.2rem;
+  }
+
+  .contact-list .link--icon {
+    height: 2.4rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .contact-list {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .contact-list .contact-list--item_address {
+    grid-column: 1/3;
+  }
+}

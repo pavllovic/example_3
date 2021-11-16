@@ -1,0 +1,64 @@
+extends ./layout/base.pug
+
+block preload
+  link(rel="preload" as='image' href=require(`Images/product/${7}/slide/1-663w.jpg`).default
+      imagesrcset=`${require(`Images/product/${7}/slide/1-332w.jpg`).default} 332w,
+                  ${require(`Images/product/${7}/slide/1-663w.jpg`).default} 663w,
+                  ${require(`Images/product/${7}/slide/1-1326w.jpg`).default} 1326w`
+      imagesizes='(min-width: 720px) 663px , calc(100vw - var(--layout-h-space) * 2 - 2.4rem)')
+
+block styles
+  style.
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-400.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-400.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-500.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-500.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-700.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-700.woff').default}) format('woff');
+    }
+
+block content
+  div(class='wrap wrap-product')
+    include ../components/header/header.pug
+    include ../components/category/category.pug
+    include ../components/breadcrumbs/breadcrumbs.pug
+    +breadcrumbs([
+      {text: 'главная', href: './index.html'},
+      {text: 'Гостинные', href: './index.html'},
+      {text: 'Мягкая мебель', href: './index.html'},
+      {text: 'Диваны', href: './index.html'}
+    ])
+    main(class='product-box')
+      include ../components/carousel-tab/carousel-tab.pug
+      include ../components/product/product.pug
+      - var product = require(`BD/product/${7}/preview.json`);
+      +product(product)
+      include ../components/product-info/product-info.pug
+      - var product_meta = require(`BD/product/${7}/meta-param.json`);
+      +product-info(product_meta)
+    section(class='hits-box')
+      h2(class='subheading') Хиты продаж
+      include ../components/grid-card/grid-card.pug
+      +grid-card([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])
+  include ../components/footer/footer.pug
+  include ../components/icon/sprite-pages.svg
+  include ../components/icon/sprite-menu-type.svg
+  include ../components/icon/sprite-controls.svg
+  include ../components/icon/sprite-contact.svg

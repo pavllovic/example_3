@@ -1,0 +1,30 @@
+.order-list--item {
+  margin: 0.5rem 0;
+}
+
+.order-list--item_remove {
+  opacity: 0;
+  transform: perspective(100vw) translate3d(0, -35px, -120px) rotateX(90deg);
+  transform-origin: top;
+  transition-duration: 0.15s, 0.15s;
+  transition-property: transform opacity;
+  transition-timing-function: ease-in, ease-in;
+}
+
+.order-list--item_remove ~ .order-list--item {
+  transform: translateY(calc(-100% - 1rem));
+  transition-delay: 0.15s;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+
+@media (min-width: 48em) {
+  .order-list--item {
+    margin: 1rem 0;
+  }
+
+  .order-list--item_remove ~ .order-list--item {
+    transform: translateY(calc(-100% - 2rem));
+  }
+}

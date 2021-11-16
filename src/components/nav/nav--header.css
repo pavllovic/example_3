@@ -1,0 +1,12 @@
+.nav--header {
+  padding: 2.2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: 87.5em) {
+  .nav--header {
+    display: none;
+  }
+}

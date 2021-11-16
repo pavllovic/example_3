@@ -1,0 +1,22 @@
+.form-product--label {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.form-product--label:nth-child(2) {
+  margin-right: 4.5rem;
+}
+
+.form-product--label span {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 48em) {
+  .form-product--label {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,34 @@
+.hero .carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.hero .carousel--controls {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .hero .carousel--controls {
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero .carousel--controls {
+    right: 25px;
+    bottom: 25px;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .hero .carousel--controls {
+    bottom: 50%;
+    left: 25px;
+    justify-content: space-between;
+    transform: translateY(50%);
+  }
+}

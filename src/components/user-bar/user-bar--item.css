@@ -1,0 +1,9 @@
+.user-bar--item:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media (min-width: 48em) {
+  .user-bar--item:not(:last-child) {
+    margin-right: 20px;
+  }
+}

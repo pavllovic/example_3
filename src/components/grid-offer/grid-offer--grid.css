@@ -1,0 +1,57 @@
+.grid-offer--grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+/* .grid-offer--grid::-webkit-scrollbar {
+  height: 3px;
+  -webkit-appearance: none;
+} */
+
+/* .grid-offer--grid::-webkit-scrollbar-track {
+  margin: 0 var(--layout-h-space);
+  background-color: hsl(0, 0%, 90%, 1);
+}
+
+.grid-offer--grid::-webkit-scrollbar-thumb {
+  background-color: var(--color-main);
+} */
+
+.grid-offer--grid .card {
+  width: 22rem;
+  max-width: 22rem;
+  padding: 2rem 1.5rem;
+  transition: 0.15s box-shadow ease-in;
+}
+
+.grid-offer--grid .card::before {
+  display: none;
+}
+
+.grid-offer--grid .card--bottom {
+  display: none;
+}
+
+.grid-offer--grid .card:hover {
+  box-shadow: var(--shadow-main);
+}
+
+.grid-offer--grid .card--badges {
+  top: 2rem;
+  left: 1.5rem;
+}
+
+@media (min-width: 87.5em) {
+  .grid-offer--grid .card {
+    width: 26rem;
+    max-width: 26rem;
+    padding: 3rem 2rem;
+  }
+
+  .grid-offer--grid .card--badges {
+    top: 3rem;
+    left: 2rem;
+  }
+}

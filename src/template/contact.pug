@@ -1,0 +1,53 @@
+extends ./layout/base.pug
+
+block preload
+
+block styles
+  style.
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-400.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-400.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-500.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-500.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-700.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-700.woff').default}) format('woff');
+    }
+
+block content
+  div(class='wrap wrap-contact')
+    include ../components/header/header.pug
+    include ../components/category/category.pug
+    include ../components/breadcrumbs/breadcrumbs.pug
+    +breadcrumbs([
+      {text: 'главная', href: './index.html'},
+      {text: 'контакты', href: './contact.html', current: 'page'}
+    ])
+    section(class='contact-box')
+      h2(class='subheading') Свяжитесь с нами
+      include ../components/form/form-message/form-message.pug
+      include ../components/contact-list/contact-list.pug
+    section(class='ymap-box')
+      h2(class='subheading') Адрес нашей компании
+      script(src='https://api-maps.yandex.ru/2.1/?apikey=5c1d5f41-62c8-4a9a-a9a0-9808a4d2f383&lang=ru_RU' type='text/javascript')
+      include ../components/ymap/ymap.pug
+  include ../components/footer/footer.pug
+  include ../components/icon/sprite-pages.svg
+  include ../components/icon/sprite-menu-type.svg
+  include ../components/icon/sprite-controls.svg
+  include ../components/icon/sprite-contact.svg

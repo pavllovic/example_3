@@ -1,0 +1,16 @@
+.order--name {
+  width: 100%;
+  margin-bottom: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 48em) {
+  .order--name {
+    width: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}

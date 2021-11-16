@@ -1,0 +1,55 @@
+.carousel-tab--tab {
+  display: flex;
+  width: 8.3rem;
+  height: 6.3rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.15s box-shadow ease-in;
+}
+
+.carousel-tab--tab:not(:first-child) {
+  margin-left: 0.7rem;
+}
+
+.carousel-tab .carousel-tab--tablist .carousel-tab--tab:focus,
+.carousel-tab .carousel-tab--tablist .carousel-tab--tab:focus-visible {
+  box-shadow: none;
+}
+
+.carousel-tab--tablist .carousel-tab--tab.is-focus,
+.carousel-tab--tablist .carousel-tab--tab.is-focus:focus,
+.carousel-tab--tablist .carousel-tab--tab.is-focus:focus-visible {
+  box-shadow: var(--shadow-main);
+}
+
+.carousel-tab--tab picture {
+  pointer-events: none;
+}
+
+.carousel-tab--tab img {
+  width: auto;
+  max-width: 7.1rem;
+  height: auto;
+  max-height: 4.4rem;
+}
+
+@media (min-width: 48em) {
+  .carousel-tab--tab {
+    width: 12rem;
+    height: 9rem;
+  }
+
+  .carousel-tab--tab:not(:first-child) {
+    margin-left: 1rem;
+  }
+
+  .carousel-tab--tab img {
+    max-width: 10.2rem;
+    max-height: 6.3rem;
+  }
+}

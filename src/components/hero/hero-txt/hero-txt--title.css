@@ -1,0 +1,43 @@
+.hero-txt--title {
+  max-width: 8.5em;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.03;
+}
+
+.hero-txt--title span {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .hero-txt--title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero-txt--title {
+    font-size: 2.9rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .hero-txt--title {
+    max-width: 100%;
+    font-family: var(--font-second);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.44;
+  }
+
+  .hero-txt--title span {
+    display: inline;
+  }
+
+  .hero-txt--title br {
+    display: none;
+  }
+}

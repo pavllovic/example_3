@@ -1,0 +1,10 @@
+@import './product-info--meta-item.css';
+@import './product-info--meta-name.css';
+@import './product-info--meta-value.css';
+
+/* @media (min-width: 87.5em) {
+  .product-info--meta {
+    column-count: 2;
+    column-gap: 5rem;
+  }
+} */

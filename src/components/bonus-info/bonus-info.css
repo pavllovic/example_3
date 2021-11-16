@@ -1,0 +1,16 @@
+@import './bonus-info--item.css';
+@import './bonus-info--icon.css';
+
+.bonus-info {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 48em) {
+  .bonus-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--bg-gray);
+  }
+}

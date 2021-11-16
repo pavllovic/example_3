@@ -1,0 +1,17 @@
+.product-info--meta-value {
+  width: 38%;
+  padding-left: 1rem;
+  background-color: var(--bg-light);
+}
+
+@media (min-width: 48em) {
+  .product-info--meta-value {
+    width: 60%;
+  }
+}
+
+@media (min-width: 77em) {
+  .product-info--meta-value {
+    width: 40%;
+  }
+}

@@ -1,0 +1,62 @@
+.btn-like--icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.btn-like--icon::before {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  transform: scale(0.8, 0.8);
+  transform-origin: center;
+  transition-duration: 0.25s, 0.25s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease, ease;
+}
+
+.btn-like--icon svg {
+  width: auto;
+  height: 100%;
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 1;
+  transition-duration: 0.25s, 0.25s;
+  transition-property: stroke, fill;
+  transition-timing-function: ease, ease;
+}
+
+.btn-like[aria-pressed=true] .btn-like--icon svg {
+  fill: hsl(0, 100%, 73%);
+  stroke: var(--color-accent);
+}
+
+.btn-like:active .btn-like--icon {
+  transform: scale(0.8, 0.8);
+}
+
+.btn-like:hover .btn-like--icon::before {
+  opacity: 0.4;
+  transform: scale(1, 1);
+}
+
+.btn-like:active .btn-like--icon::before {
+  opacity: 0.4;
+  transform: scale(0, 0);
+}
+
+.btn-like:hover .btn-like--icon svg {
+  stroke: var(--color-accent);
+}
+
+.btn-like:active .btn-like--icon svg {
+  fill: hsl(0, 100%, 73%);
+  stroke: var(--color-accent);
+}

@@ -1,0 +1,26 @@
+.nav--btn-close {
+  position: absolute;
+  top: 1.95rem;
+  right: 1.5rem;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: hsl(0, 0%, 94%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav--btn-close svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  fill: hsl(0, 0%, 75%);
+}
+
+@media (min-width: 87.5em) {
+  .nav--btn-close {
+    display: none;
+  }
+}

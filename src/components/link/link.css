@@ -1,0 +1,18 @@
+@import './link--icon.css';
+@import './link--txt.css';
+
+.link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.27;
+  text-decoration: none;
+}
+
+@media (min-width: 48em) {
+  .link {
+    font-size: 1.4rem;
+  }
+}

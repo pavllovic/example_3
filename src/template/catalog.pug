@@ -1,0 +1,61 @@
+extends ./layout/base.pug
+
+block preload
+
+block styles
+  style.
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-400.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-400.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-500.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-500.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-700.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-700.woff').default}) format('woff');
+    }
+
+block content
+  div(class='wrap wrap-catalog')
+    include ../components/header/header.pug
+    include ../components/category/category.pug
+    include ../components/breadcrumbs/breadcrumbs.pug
+    +breadcrumbs([
+      {text: 'главная', href: './index.html'},
+      {text: 'Гостинные', href: './catalog.html'},
+      {text: 'Мягкая мебель', href: './catalog.html'},
+      {text: 'Диваны', href: './catalog.html', current: 'page'}
+    ])
+    section 
+      h2(class='visually-hidden') Каталог товаров
+      div(class='catalog-controls')
+        include ../components/menu-action/menu-action_sort.pug
+        +menu-action_sort('menu-sort',
+          [
+            {text: 'по убыванию цены', id: '1'},
+            {text: 'по возрастанию цены', id: '2'},
+            {text: 'по популярности', id: '3'}
+          ],
+          'Сортировать'
+        )  
+      include ../components/grid-card/grid-card.pug
+      +grid-card([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])
+  include ../components/footer/footer.pug
+  include ../components/icon/sprite-pages.svg
+  include ../components/icon/sprite-menu-type.svg
+  include ../components/icon/sprite-controls.svg
+  include ../components/icon/sprite-contact.svg

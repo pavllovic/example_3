@@ -1,0 +1,7 @@
+include ../icon/icon.pug
+include ../link/link.pug
+ul(class='header-links')
+  li(class='header-links--item')
+    +link({href: 'tel:89648999119', icon: 'phone', ally: 'наш номер телефона', text: '8 (964) 89 99 119'})
+  li(class='header-links--item')
+    +link({href: '#', icon: 'delivery', text: 'Доставка'})

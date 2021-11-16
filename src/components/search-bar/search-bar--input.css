@@ -1,0 +1,12 @@
+.search-bar--input {
+  width: 100%;
+  padding: 1rem 0;
+  padding-right: 15px;
+  padding-left: calc(1.5rem + 35px);
+  border: none;
+  background-color: var(--bg-gray);
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}

@@ -1,0 +1,22 @@
+div(class='ymap' id='ymap')
+script(type="text/javascript").
+  ymaps.ready(function(){
+      var myMap = new ymaps.Map("ymap", {
+          center: [44.898317, 37.354456],
+          zoom: 17,
+          controls: []
+      });
+
+      var myPoint = new ymaps.Placemark(
+        [44.898317, 37.354456], 
+        {
+          iconCaption: 'Мебель loft'
+        }, 
+        {
+          preset: 'islands#shoppingCircleIcon',
+          iconColor: '#0E487A'
+        }
+      )
+
+      myMap.geoObjects.add(myPoint);
+  });

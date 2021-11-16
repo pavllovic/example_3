@@ -1,0 +1,38 @@
+@import './form-product--controls.css';
+@import '../../btn-like/btn-like.css';
+@import './form-product--price.css';
+@import '../combobox/combobox.css';
+@import './form-product--label.css';
+@import './form-product--combobox-input.css';
+@import './form-product--combobox-item.css';
+@import './form-product--combobox-options.css';
+
+.form-product {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-product [type='submit'] {
+  padding: 1rem 3rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.form-product .btn-like--icon {
+  width: 2.7rem;
+  height: 2.5rem;
+}
+
+@media (min-width: 48em) {
+  .form-product [type='submit'] {
+    padding: 1rem 5rem;
+    margin-right: 1.5rem;
+    margin-left: 3rem;
+  }
+
+  .form-product .btn-like--txt {
+    display: block;
+  }
+}

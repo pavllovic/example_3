@@ -1,0 +1,8 @@
+mixin menu-category(category)
+
+  include ../icon/icon.pug
+  include ../link/link.pug
+  ul(class='menu-category')
+    each item in category
+      li(class=(item.icon === 'new' || item.icon === 'stock') ? `menu-category--item menu-category--item_${item.icon}` : 'menu-category--item')
+        +link(item)

@@ -1,0 +1,27 @@
+mixin form-person(person)
+  form(class='form-person' name='form-person' action='' method='POST' enctype='application/x-www-form-urlencoded')
+    label(class='form--label' for='form-person--name')
+      span(class='form--label-text') Имя
+      input(class='form--input' type='text' id='form-person--name' name='name' value=`${person.name}`)
+    label(class='form--label' for='form-person--surname')
+      span(class='form--label-text') Фамилия
+      input(class='form--input' type='text' id='form-person--surname' name='surname' value=`${person.surname}`)
+    label(class='form--label' for='form-person--email')
+      span(class='form--label-text') E-mail
+      input(class='form--input' type='text' id='form-person--email' name='email' value=`${person.email}`)
+    label(class='form--label' for='form-person--phone')
+      span(class='form--label-text') Номер телефона
+      input(class='form--input' type='text' id='form-person--phone' name='phone' value=`${person.phone}`)
+    label(class='form--label' for='form-person--city')
+      span(class='form--label-text') Город
+      input(class='form--input' type='text' id='form-person--city' name='city' value=`${person.city}`)
+    label(class='form--label' for='form-person--street')
+      span(class='form--label-text') Улица
+      input(class='form--input' type='text' id='form-person--street' name='street' value=`${person.street}`)
+    label(class='form--label' for='form-person--home')
+      span(class='form--label-text') Дом/Корпус
+      input(class='form--input' type='text' id='form-person--home' name='home' value=`${person.home}`)
+    label(class='form--label' for='form-person--room')
+      span(class='form--label-text') Квартира
+      input(class='form--input' type='text' id='form-person--room' name='room' value=`${person.room}`)
+    button(class='btn' type='submit') Изменить

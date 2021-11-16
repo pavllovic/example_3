@@ -1,0 +1,13 @@
+mixin card-meta(data)
+  include ../../icon/icon.pug
+  div(class='card-meta')
+    div(class='card-meta--header') Размеры
+    div(class='card-meta--box')
+      span(class='card-meta--name') Ширина
+      span(class='card-meta--value') #{data.width} СМ
+    div(class='card-meta--box')
+      span(class='card-meta--name') Глубина
+      span(class='card-meta--value') #{data.depth} СМ
+    div(class='card-meta--box')
+      span(class='card-meta--name') Высота
+      span(class='card-meta--value') #{data.height} СМ 

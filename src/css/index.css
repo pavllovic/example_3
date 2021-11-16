@@ -1,0 +1,83 @@
+@import './common.css';
+@import '../components/hero/hero.css';
+@import '../components/carousel/carousel.css';
+@import '../components/grid-card/grid-card.css';
+@import '../components/card/card.css';
+
+.wrap-index .hero {
+  margin-bottom: 2rem;
+}
+
+.wrap-index .hits-box {
+  margin-bottom: 5rem;
+}
+
+.wrap-index .hits-box .subheading {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 48em) {
+  .wrap-index .hero {
+    margin-bottom: 4rem;
+  }
+
+  .wrap-index .hits-box {
+    margin-bottom: 6rem;
+  }
+
+  .wrap-index .hits-box .subheading {
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .wrap-index .header {
+    padding-top: 5.7rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+  }
+
+  .wrap-index .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 0.5rem calc((100% - 1140px) / 2);
+    margin-right: 0;
+    background-color: var(--bg-dark);
+  }
+
+  .wrap-index .nav .menu-page {
+    display: flex;
+    flex-direction: row;
+    margin-left: -0.5rem;
+  }
+
+  .wrap-index .nav .link {
+    color: var(--color-text-light);
+  }
+
+  .wrap-index .nav .link--icon svg {
+    fill: var(--color-text-light);
+  }
+
+  .wrap-index .header .header-links {
+    display: none;
+  }
+
+  .wrap-index .nav .header-links {
+    display: flex;
+    margin-right: -5px;
+  }
+
+  .wrap-index .hero {
+    margin-bottom: 3rem;
+  }
+
+  .wrap-index .hits-box {
+    margin-bottom: 7rem;
+  }
+}

@@ -1,0 +1,46 @@
+@import './common.css';
+@import '../components/order-list/order-list.css';
+@import '../components/order/order.css';
+@import '../components/grid-offer/grid-offer.css';
+@import '../components/card/card.css';
+@import '../components/breadcrumbs/breadcrumbs.css';
+
+.wrap-cart .breadcrumbs {
+  margin-bottom: 1rem;
+}
+
+.order-list {
+  margin-bottom: 2rem;
+}
+
+.offer-list-box {
+  margin-bottom: 4rem;
+}
+
+.offer-list-box .subheading {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 48em) {
+  .wrap-cart .breadcrumbs {
+    margin-bottom: 2rem;
+  }
+
+  .order-list {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .order-list {
+    margin-bottom: 8rem;
+  }
+
+  .offer-list-box .subheading {
+    margin-bottom: 1.5rem;
+  }
+
+  .offer-list-box {
+    margin-bottom: 6rem;
+  }
+}

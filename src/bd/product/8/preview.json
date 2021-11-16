@@ -1,0 +1,21 @@
+{
+  "name": "Шерона Barhat Grey",
+  "type": "Двухспальные кровати",
+  "alt": "кровать",
+  "num": "8",
+  "stock": false,
+  "price": 21990,
+  "old_price": false,
+  "rating": 4,
+  "size": [
+    {"width": "43", "depth": "43", "height": "77"},
+    {"width": "145", "depth": "120", "height": "77"},
+    {"width": "234", "depth": "170", "height": "100"}
+  ],
+  "color": [
+    {"name": "желтый", "value": "#FFC107"},
+    {"name": "красный", "value": "#E94848"},
+    {"name": "зеленый", "value": "#43BF57"}
+  ],
+  "href": "product"
+}

@@ -1,0 +1,27 @@
+@import './order-list--list.css';
+@import './order-list--count.css';
+@import './order-list--total.css';
+@import './order-list--btn-order.css';
+@import './order-list--item.css';
+
+.order-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.order-list_remove .order-list ~ * {
+  transform: translateY(-139px);
+  transition: transform 0.15s ease-in 0.15s;
+}
+
+/* footer {
+  transition: transform 0.5s ease-in;
+} */
+
+/* .order-list_remove footer {
+  transform: translateY(-139px);
+  transition: transform 0.5s ease-in;
+} */

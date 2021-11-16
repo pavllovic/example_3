@@ -1,0 +1,21 @@
+{
+  "name": "Нера Zzurri",
+  "type": "Стелажи",
+  "alt": "Стелаж",
+  "num": "4",
+  "stock": false,
+  "price": 10990,
+  "old_price": false,
+  "rating": 4,
+  "size": [
+    {"width": "43", "depth": "43", "height": "77"},
+    {"width": "145", "depth": "120", "height": "77"},
+    {"width": "234", "depth": "170", "height": "100"}
+  ],
+  "color": [
+    {"name": "темно - серый", "value": "#6F6C67"},
+    {"name": "красный", "value": "#E94848"},
+    {"name": "зеленый", "value": "#43BF57"}
+  ],
+  "href": "product"
+}

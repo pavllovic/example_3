@@ -1,0 +1,21 @@
+{
+  "name": "Муамар Каддафи",
+  "type": "Шкафы",
+  "alt": "Шкаф",
+  "num": "14",
+  "stock": 30,
+  "price": 19990,
+  "old_price": 40000,
+  "rating": 4,
+  "size": [
+    {"width": "43", "depth": "43", "height": "77"},
+    {"width": "145", "depth": "120", "height": "77"},
+    {"width": "234", "depth": "170", "height": "100"}
+  ],
+  "color": [
+    {"name": "желтый", "value": "#FFC107"},
+    {"name": "красный", "value": "#E94848"},
+    {"name": "зеленый", "value": "#43BF57"}
+  ],
+  "href": "product"
+}

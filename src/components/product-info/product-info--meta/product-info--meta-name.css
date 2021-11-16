@@ -1,0 +1,15 @@
+.product-info--meta-name {
+  padding-right: 1rem;
+  background-color: var(--bg-light);
+}
+
+.product-info--meta-name::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 0;
+  border-bottom: 1px dotted var(--color-text-gray);
+  content: '';
+  transform: translateY(-1px);
+}

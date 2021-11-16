@@ -1,0 +1,20 @@
+.card--badges {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 48em) {
+  .card--badges {
+    top: 2rem;
+    left: 1.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .card--badges {
+    left: 2rem;
+  }
+}

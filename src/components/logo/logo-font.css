@@ -1,0 +1,17 @@
+.logo-font {
+  display: flex;
+  color: var(--color-black);
+  font-family: inherit;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 4.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (min-width: 48em) {
+  .logo-font {
+    font-size: 4.2rem;
+    line-height: 4.9rem;
+  }
+}

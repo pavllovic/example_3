@@ -1,0 +1,5 @@
+.header .logo {
+  display: flex;
+  width: 11.3rem;
+  flex-shrink: 0;
+}

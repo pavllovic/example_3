@@ -1,0 +1,49 @@
+.menu-action--icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.menu-action--icon svg {
+  color: var(--color-text);
+  fill: currentColor;
+  stroke: currentColor;
+  transition-duration: 0.25s, 0.25s;
+  transition-property: transform, color;
+  transition-timing-function: ease, ease;
+}
+
+[aria-controls][aria-expanded='true'] .menu-action--icon_etc svg {
+  transform: rotateZ(180deg);
+}
+
+[aria-controls][aria-expanded='true'] .menu-action--icon_menu svg {
+  transform: scaleX(-1);
+}
+
+.menu-action--icon::before {
+  position: absolute;
+  z-index: -1;
+  width: 3rem;
+  height: 3rem;
+  background-color: hsl(0, 0%, 94%);
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  transform: scale(0.8, 0.8);
+  transition-duration: 0.15s, 0.15s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in, ease-in;
+}
+
+[aria-controls]:hover .menu-action--icon::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+[aria-controls]:active .menu-action--icon::before {
+  opacity: 1;
+  transform: scale(0.9, 0.9);
+}

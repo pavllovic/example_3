@@ -1,0 +1,100 @@
+.carousel-tab--control {
+  position: relative;
+  z-index: 1;
+  display: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  align-self: center;
+  padding: 0;
+  border: none;
+  background: var(--bg-light);
+  cursor: pointer;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+
+.carousel-tab--control_prev {
+  margin-right: -0.5rem;
+}
+
+.carousel-tab--control_next {
+  margin-left: -0.5rem;
+  transform: scaleX(-1);
+}
+
+.carousel-tab--control::before {
+  position: absolute;
+  z-index: -1;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  transform: scale(0.8, 0.8) translateX(0);
+  transition-duration: 0.15s, 0.15s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in, ease-in;
+}
+
+.carousel-tab--control_prev:hover {
+  transform: translateX(-5px);
+}
+
+.carousel-tab--control_next:hover {
+  transform: scaleX(-1) translateX(-5px);
+}
+
+.carousel-tab--control:hover::before {
+  opacity: 1;
+  transform: scale(1, 1) translateX(1px);
+}
+
+.carousel-tab--control_prev:active {
+  transform: translateX(-7px);
+  transition-duration: 0.1s;
+}
+
+.carousel-tab--control_next:active {
+  transform: scaleX(-1) translateX(-7px);
+  transition-duration: 0.1s;
+}
+
+.carousel-tab--control:active::before {
+  opacity: 1;
+  transform: scale(0.85, 0.85) translateX(1px);
+  transition-duration: 0.1s;
+}
+
+.carousel-tab--control_prev[disabled]:hover,
+.carousel-tab--control_prev[disabled]:active {
+  transform: translateX(0);
+}
+
+.carousel-tab--control_next[disabled]:hover,
+.carousel-tab--control_next[disabled]:active {
+  transform: scaleX(-1) translateX(0);
+}
+
+.carousel-tab--control[disabled]:hover::before,
+.carousel-tab--control[disabled]:active::before {
+  opacity: 0;
+  transform: scale(0, 0) translateX(1px);
+}
+
+.carousel-tab--control svg {
+  width: 0.8rem;
+  height: 1.5rem;
+  fill: #000;
+  pointer-events: none;
+}
+
+@media (min-width: 48em) {
+  .carousel-tab--control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

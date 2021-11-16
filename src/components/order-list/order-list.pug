@@ -1,0 +1,16 @@
+mixin order-list(arrId)
+  - let sum = 0
+  include ../order/order.pug
+  section(class='order-list')
+    h2(class='subheading') Ваша корзина
+    span(class='order-list--count') <span id='order-count'>#{arrId.length}</span> предмета
+    ul(class='order-list--list')
+      each val in arrId
+        - var order = require(`BD/order/${val}.json`) 
+        - var product = require(`BD/product/${order.product}/preview.json`)
+        - sum = sum + product.price
+        li(class='order-list--item')      
+          +order(product, order)
+    span(class='order-list--total') Итоговая стоимость: <span><span data-order-total=#{sum}>#{formattPrice(sum)}</span>₽</span>
+    button(class='btn order-list--btn-order' type='button') Оформить заказ
+  

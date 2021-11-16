@@ -1,0 +1,10 @@
+:root {
+  --font-main: 'Roboto', sans-serif;
+  --font-second: 'Roboto-Condensed', sans-serif;
+  --font-accent: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--font-main);
+  font-weight: 400;
+}

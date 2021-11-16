@@ -1,0 +1,26 @@
+.breadcrumbs--item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs--item:not(:last-child) {
+  display: none;
+  margin-right: 1rem;
+}
+
+.breadcrumbs--item svg {
+  width: 0.6rem;
+  height: 0.8rem;
+  margin-right: 0.7rem;
+  fill: var(--color-text-gray);
+}
+
+@media (min-width: 48em) {
+  .breadcrumbs--item:not(:last-child) {
+    display: flex;
+  }
+
+  .breadcrumbs--item svg {
+    display: none;
+  }
+}

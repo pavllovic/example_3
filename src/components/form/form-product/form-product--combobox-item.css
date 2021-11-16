@@ -1,0 +1,62 @@
+.form-product .combobox--item {
+  position: relative;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1rem;
+  box-shadow: var(--shadow-main);
+  font-size: 1.4rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.form-product .combobox--item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.form-product .combobox-count .combobox--item {
+  width: 3rem;
+  font-weight: 500;
+}
+
+.form-product .combobox-color .combobox--item {
+  --bg-color: #fff;
+
+  width: 3rem;
+  padding: 2px;
+  background: var(--bg-color);
+  background-clip: content-box;
+  color: transparent;
+  font-size: 0.1px;
+  letter-spacing: -1ch;
+  line-height: 0.1;
+}
+
+/* ------------------------------------------- *
+  border for ".combobox-color .combobox--item"
+  when it :hover or has class .is-focus
+* ------------------------------------------- */
+.form-product .combobox-color .combobox--item::before {
+  background: var(--color-main);
+  opacity: 0;
+  transform: scale(1, 1);
+}
+
+.form-product .combobox-color .combobox--item:hover::before,
+.form-product .combobox-color .combobox--item.is-focus::before {
+  opacity: 1;
+}
+
+.form-product .combobox-color .combobox--options:hover .combobox--item.is-focus::before {
+  opacity: 0;
+}
+
+.form-product .combobox-color .combobox--options:hover .combobox--item.is-focus:hover::before {
+  opacity: 1;
+}
+
+.form-product .combobox-size .combobox--item {
+  justify-content: flex-start;
+  text-align: left;
+}

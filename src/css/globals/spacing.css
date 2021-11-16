@@ -1,0 +1,21 @@
+:root {
+  --layout-h-space: 15px;
+}
+
+@media (min-width: 48em) {
+  :root {
+    --layout-h-space: min(calc((100vw - 737px) / 2), 24px);
+  }
+}
+
+@media (min-width: 64em) {
+  :root {
+    --layout-h-space: 32px;
+  }
+}
+
+@media (min-width: 75em) {
+  :root {
+    --layout-h-space: min(calc((100vw - 1157px) / 2), 130px);
+  }
+}

@@ -1,0 +1,13 @@
+.grid-offer--item {
+  flex-shrink: 0;
+}
+
+.grid-offer--item:not(:first-child) {
+  margin-left: 1.5rem;
+}
+
+@media (min-width: 48em) {
+  .grid-offer--item:not(:first-child) {
+    margin-left: 3rem;
+  }
+}

@@ -1,0 +1,87 @@
+@import './common.css';
+@import '../components/breadcrumbs/breadcrumbs.css';
+@import '../components/bonus/bonus.css';
+@import '../components/bonus-info/bonus-info.css';
+@import '../components/form/form-person/form-person.css';
+@import '../components/order-table/order-table.css';
+
+.wrap-accaunt .breadcrumbs {
+  margin-bottom: 3rem;
+}
+
+.wrap-accaunt .bonus-box {
+  margin-bottom: 2.5rem;
+}
+
+.wrap-accaunt .form-person-box {
+  margin-bottom: 4rem;
+}
+
+.wrap-accaunt .order-table-box {
+  max-width: 58.5rem;
+  margin-bottom: 6rem;
+}
+
+.wrap-accaunt .bonus {
+  margin-top: 1.5rem;
+}
+
+.wrap-accaunt .bonus-info {
+  margin-top: 0.5rem;
+}
+
+.wrap-accaunt .form-person {
+  max-width: 45.7rem;
+  margin-top: 2rem;
+}
+
+.wrap-accaunt .order-table {
+  max-width: 58.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 48em) {
+  .wrap-accaunt .breadcrumbs {
+    margin-bottom: 4rem;
+  }
+
+  .wrap-accaunt .bonus-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
+  .wrap-accaunt .bonus {
+    margin-top: 0;
+  }
+
+  .wrap-accaunt .bonus-info {
+    width: 100%;
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .wrap-accaunt {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wrap-accaunt .form-person-box {
+    flex-grow: 0;
+    margin-right: 9.8rem;
+    margin-bottom: 17rem;
+  }
+
+  .wrap-accaunt .order-table-box {
+    flex-grow: 2;
+    margin-bottom: 17rem;
+  }
+
+  .wrap-accaunt .form-person,
+  .wrap-accaunt .order-table {
+    margin-top: 3rem;
+  }
+}

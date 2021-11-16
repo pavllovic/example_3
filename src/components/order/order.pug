@@ -1,0 +1,37 @@
+mixin order(product, order)
+  include ../icon/icon.pug
+  include ./order--btn-remove/order--btn-remove.pug
+  div(class='order' id=`order-${order.item}` data-order-price=`${product.price}`)
+    div(class='order--img')
+      source(srcset=`${require(`Images/product/${product.num}/preview/1-200w.webp`).default} 200w,
+                     ${require(`Images/product/${product.num}/preview/1-400w.webp`).default} 400w`
+            sizes='100px'
+            type='image/webp') 
+      source(srcset=`${require(`Images/product/${product.num}/preview/1-200w.jpg`).default} 200w,
+                     ${require(`Images/product/${product.num}/preview/1-400w.jpg`).default} 400w`
+            sizes='100px'
+            type='image/jpg')
+      img(src=require(`Images/product/${product.num}/preview/1-200w.jpg`).default width='100' height='75' alt=`${product.alt}.`)
+    div(class='order--box')
+      span(class='order--name') #{product.name}
+      if product.stock
+        span(class='order--badge order--badge_stock')
+          +icon('stock')
+          span(class='visually-hidden') скидка
+          span -#{product.stock}%
+      if product.old_price     
+        span(class='order--price order--price_old')
+          <span class='visually-hidden'>цена без скидки</span> #{formattPrice(product.old_price)}₽
+      span(class='order--price')
+        <span class='visually-hidden'>цена со скидкой</span> #{formattPrice(product.price)}₽ 
+    div(class='order--box order--box_meta')
+      span(class='order--color' style=`--color-order:${product.color[order.color].value}`) 
+        span(class='order--label') Цвет:
+        span #{product.color[order.color].name}
+      span(class='order--count') 
+        span(class='order--label') Количество:
+        span #{order.count}
+      span(class='order--size') 
+        span(class='order--label') Размер(Ш×Д×В):
+        span #{product.size[order.size].width} СМ × #{product.size[order.size].depth} СМ × #{product.size[order.size].height} СМ
+    +order--btn-remove(order.item)

@@ -1,0 +1,64 @@
+.menu-action [role='menuitem'] {
+  position: relative;
+  width: max-content;
+  padding: 12.5px 5px;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.menu-action [role='menuitem']::before {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: hsl(0, 0%, 80%);
+  content: '';
+  opacity: 0;
+  transform: scaleX(0.5);
+  transform-origin: center;
+  transition-duration: 0.25s, 0.25s;
+  transition-property: transform, opacity;
+  transition-timing-function: ease-in, ease-in;
+}
+
+.menu-type .menu-action [role='menuitem'] {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.menu-type .menu-action [role='menuitem']:not(:first-child) {
+  margin-top: 10px;
+}
+
+.menu-action [role='menuitem']:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.menu-action [role='menuitem'].is-focus::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+[role='menu']:hover [role='menuitem'].is-focus::before {
+  opacity: 0;
+  transform: scaleX(0.5);
+}
+
+.menu-action [role='menuitem'].is-focus:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.menu-action [role='menuitem']:active::before,
+.menu-action [role='menuitem'].is-focus:active::before {
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition-duration: 0.1s, 0.1s;
+}

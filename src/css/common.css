@@ -1,0 +1,62 @@
+@import './utility/reset.css';
+@import './globals/fonts.css';
+@import './globals/color.css';
+@import './globals/spacing.css';
+@import './globals/typography.css';
+@import './utility/focus-visible.css';
+@import './utility/visually-hidden.css';
+@import './utility/no-wrap.css';
+@import '../components/btn/btn.css';
+@import '../components/link/link.css';
+@import '../components/subheading/subheading.css';
+@import '../components/header/header.css';
+@import '../components/footer/footer.css';
+@import '../components/nav/nav.css';
+@import '../components/search-bar/search-bar.css';
+@import '../components/user-bar/user-bar.css';
+@import '../components/header-links/header-links.css';
+@import '../components/logo/logo.css';
+@import '../components/logo/logo-font.css';
+@import '../components/menu-action/menu-action.css';
+@import '../components/contact-list/contact-list.css';
+@import '../components/menu-page/menu-page.css';
+@import '../components/category/category.css';
+@import '../components/menu-category/menu-category.css';
+
+body {
+  display: flex;
+  min-width: 320px;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-text);
+}
+
+.wrap {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1400px;
+  padding: 0 var(--layout-h-space);
+}
+
+.category {
+  width: calc(100% + var(--layout-h-space) * 2);
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 48em) {
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .category {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .header {
+    margin-bottom: 2rem;
+  }
+}

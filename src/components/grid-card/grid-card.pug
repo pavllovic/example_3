@@ -1,0 +1,9 @@
+mixin grid-card(arrId)
+  include ../card/card.pug
+  div(class='grid-card' role='grid' id='grid-card')
+    div(class='grid-card--grid' role='row')
+      each val, index in arrId
+        - let data = require(`BD/product/${val}/preview.json`);
+        div(class='grid-card--item' role='gridcell')
+          +card(data)
+  

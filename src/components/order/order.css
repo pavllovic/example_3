@@ -1,0 +1,46 @@
+@import './order--name.css';
+@import './order--img.css';
+@import './order--box.css';
+@import './order--price.css';
+@import './order--size.css';
+@import './order--label.css';
+@import './order--count.css';
+@import './order--color.css';
+@import './order--badge.css';
+@import './order--btn-remove/order--btn-remove.css';
+
+.order {
+  position: relative;
+  display: grid;
+  align-items: flex-start;
+  padding: 1.5rem;
+  padding-right: 3.8rem;
+  padding-bottom: 0.5rem;
+  box-shadow: var(--shadow-main);
+  column-gap: 1.5rem;
+  grid-template-columns: 6.7rem 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 0.8rem;
+}
+
+.order .order--box_meta {
+  grid-column: 1/3;
+}
+
+@media (min-width: 48em) {
+  .order {
+    padding: 2.2rem 2rem;
+    padding-right: 5rem;
+    column-gap: 4rem;
+    grid-template-columns: 10rem 1fr;
+    row-gap: 0;
+  }
+
+  .order .order--box_meta {
+    grid-column: 2/3;
+  }
+
+  .order .order--img {
+    grid-row: 1/3;
+  }
+}

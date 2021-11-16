@@ -1,0 +1,23 @@
+.card--btn-cart {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  text-align: center;
+}
+
+.card--btn-cart span:first-child {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .card--btn-cart span:first-child {
+    display: block;
+  }
+
+  .card--btn-cart span:last-child {
+    display: none;
+  }
+}

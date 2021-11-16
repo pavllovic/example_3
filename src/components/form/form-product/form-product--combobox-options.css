@@ -1,0 +1,18 @@
+.form-product .combobox-count .combobox--options {
+  width: 5rem;
+  padding: 1rem;
+  margin-left: -1rem;
+}
+
+.form-product .combobox-color .combobox--options {
+  width: 5rem;
+  padding: 1rem;
+  margin-left: -1rem;
+}
+
+.form-product .combobox-size .combobox--options {
+  width: max-content;
+  min-width: calc(100% + 1rem);
+  padding: 1rem;
+  margin-left: -1rem;
+}

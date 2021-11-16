@@ -1,0 +1,10 @@
+mixin breadcrumbs(links)
+  include ../icon/icon.pug
+  ul(class='breadcrumbs')
+    each link in links
+      li(class='breadcrumbs--item')
+        if link === links[links.length - 1]
+          +icon('arrow')
+        a(class='breadcrumbs--link' href=`${link.href}` aria-current=link.current) #{link.text}
+
+

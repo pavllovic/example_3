@@ -1,0 +1,70 @@
+extends ./layout/base.pug
+
+block preload
+  link(rel="preload" as='image' href=require('Images/carousel-hero/1-1140w.webp').default
+      imagesrcset=`${require('Images/carousel-hero/1-440w.webp').default} 440w,
+                  ${require('Images/carousel-hero/1-680w.webp').default} 680w,
+                  ${require('Images/carousel-hero/1-1140w.webp').default} 1140w,
+                  ${require('Images/carousel-hero/1-2280w.webp').default} 2280w`
+      imagesizes='(min-width: 1200px) 1140px, calc(100vw - var(--layout-h-space) * 2)')
+
+block styles
+  link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&text=LOFTМЕБЕЛЬ&display=swap" rel='stylesheet' media='screen and (min-width: 87.5em)')
+  style.
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-400.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-400.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-500.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-500.woff').default}) format('woff');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-700.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-700.woff').default}) format('woff');
+    }
+    @media(min-width: 87.5em) {
+      @font-face {
+      font-family: 'Roboto-Condensed';
+      font-weight: 400;
+      font-display: swap;
+      src:
+        url(#{require('Fonts/roboto-condensed-400.woff2').default}) format('woff2'),
+        url(#{require('Fonts/roboto-condensed-400.woff').default}) format('woff');
+      }
+      @font-face {
+        font-family: 'Roboto-Condensed';
+        font-weight: 700;
+        font-display: swap;
+        src:
+          url(#{require('Fonts/roboto-condensed-700.woff2').default}) format('woff2'),
+          url(#{require('Fonts/roboto-condensed-700.woff').default}) format('woff');
+      }
+    } 
+    
+block content
+  div(class='wrap wrap-index')
+    include ../components/header/header.pug
+    include ../components/category/category.pug
+    include ../components/hero/hero.pug
+    section(class='hits-box')
+      h2(class='subheading') Хиты продаж
+      include ../components/grid-card/grid-card.pug
+      +grid-card([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])
+  include ../components/footer/footer.pug
+  include ../components/icon/sprite-pages.svg
+  include ../components/icon/sprite-menu-type.svg
+  include ../components/icon/sprite-controls.svg
+  include ../components/icon/sprite-contact.svg

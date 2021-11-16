@@ -1,0 +1,11 @@
+.bonus-info--icon {
+  width: 2.5rem;
+  margin-right: 1.5rem;
+  line-height: 0;
+}
+
+.bonus-info--icon svg {
+  width: 100%;
+  height: auto;
+  fill: var(--color-black);
+}

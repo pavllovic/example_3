@@ -1,0 +1,8 @@
+.search-bar--icon {
+  position: absolute;
+  left: 15px;
+  display: flex;
+  height: 1.4rem;
+  fill: none;
+  stroke: var(--color-black);
+}

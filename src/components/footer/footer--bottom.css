@@ -1,0 +1,12 @@
+.footer--bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+@media (min-width: 48em) {
+  .footer--bottom {
+    margin-top: 2.5rem;
+  }
+}

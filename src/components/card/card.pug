@@ -1,0 +1,37 @@
+mixin card(data)
+  include ../icon/icon.pug
+  article(class='card')
+    a(class='card--link' href=`./${data.href}.html` tabindex='0' data-grid='widget')
+      span(class='visually-hidden') #{data.type}, #{data.name}, #{data.price} рублей.
+    div(class='card--top')
+      div(class='card--img')
+        picture
+          source(srcset=`${require(`Images/product/${data.num}/preview/1-200w.webp`).default} 200w,
+                         ${require(`Images/product/${data.num}/preview/1-400w.webp`).default} 400w`
+                         sizes='200px'
+                         type='image/webp') 
+          source(srcset=`${require(`Images/product/${data.num}/preview/1-200w.jpg`).default} 200w,
+                         ${require(`Images/product/${data.num}/preview/1-400w.jpg`).default} 400w`
+                         sizes='200px'
+                         type='image/jpg')
+          img(src=require(`Images/product/${data.num}/preview/1-400w.jpg`).default width='200' height='150' alt=`${data.alt}.`)
+      h3(class='card--header') #{data.name}
+      span(class='card--type') #{data.type}
+      div(class='card--badges')
+        if data.stock
+          span(class='visually-hidden') акция
+          span(class='card--badge card--badge_stock')
+            +icon('stock')
+            span -#{data.stock}%
+      span(class='card--price') #{formattPrice(data.price)}₽
+      if data.old_price
+        span(class='card--price card--price_old'). 
+          <span class='visually-hidden'>цена до скидки</span> #{formattPrice(data.old_price)}₽
+      include ../btn-like/btn-like.pug
+    div(class='card--bottom')
+      include ./card-meta/card-meta.pug
+      +card-meta(data.size[0])
+      button(class='btn card--btn-cart' tabindex='0') 
+        span Добавить в корзину
+        span В корзину
+    

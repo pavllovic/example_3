@@ -1,0 +1,9 @@
+.footer--nav {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .footer--nav {
+    display: block;
+  }
+}

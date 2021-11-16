@@ -1,0 +1,26 @@
+.combobox--options {
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+  width: 100%;
+  background: var(--bg-gray);
+  box-shadow: var(--shadow-main);
+  transition-timing-function: ease-in, ease-in, ease-in;
+}
+
+[aria-expanded='false'] ~ .combobox--options {
+  opacity: 0;
+  transform: translateY(0);
+  transition-delay: 0s, 0s, 0.15s;
+  transition-duration: 0.15s, 0.15s, 0s;
+  transition-property: opacity, transform, visibility;
+  visibility: hidden;
+}
+
+[aria-expanded='true'] ~ .combobox--options {
+  opacity: 1;
+  transform: translateY(10px);
+  transition-delay: 0s, 0s, 0s;
+  transition-duration: 0.15s, 0.15s, 0s;
+  visibility: visible;
+}

@@ -1,0 +1,27 @@
+.breadcrumbs--link {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-gray);
+  font-size: 1.2rem;
+  line-height: 1.17;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.5s color ease;
+}
+
+.breadcrumbs--item:not(:first-child) .breadcrumbs--link::before {
+  display: none;
+  margin-right: 1rem;
+  color: var(--color-text);
+  content: '/';
+}
+
+@media (min-width: 48em) {
+  .breadcrumbs--item:not(:first-child) .breadcrumbs--link::before {
+    display: inline-block;
+  }
+}
+
+.breadcrumbs--link:hover {
+  color: var(--color-text-dark-gray);
+}

@@ -1,0 +1,5 @@
+.product--descript p {
+  color: hsl(0, 0%, 41%);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}

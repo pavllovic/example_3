@@ -1,0 +1,10 @@
+mixin menu-action_sort(id, links, btn_text)
+  include ../icon/icon.pug
+  div(class='menu-action' id=`${id}`)
+    button(type='button' aria-haspopup='true' aria-expanded='false' aria-controls=`${id}--menu` id=`${id}--btn`) 
+      span(class='menu-action--txt') #{btn_text}
+      span(class='menu-action--icon menu-action--icon_menu' aria-hidden='true')
+        +icon('menu')
+    div(id=`${id}--menu` tabindex='0' role='menu' aria-hidden='true' aria-labelledby=`${id}--btn` aria-activedescendant)
+      each link in links
+        btn(id=`link-${link.id}` role='menuitem') #{link.text}

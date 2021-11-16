@@ -1,0 +1,35 @@
+.carousel-tab--slide {
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.2rem;
+  opacity: 0.2;
+  transition-delay: 0s, 0.3s;
+  transition-duration: 0.3s, 0s;
+  transition-property: opacity, visibility;
+  transition-timing-function: ease-in, ease-in;
+  visibility: hidden;
+}
+
+.carousel-tab--slide img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.carousel-tab--slide.is-active {
+  order: -1;
+  opacity: 1;
+  transition-delay: 0.3s, 0.3s;
+  transition-duration: 0.3s, 0s;
+  visibility: visible;
+}
+
+@media (min-width: 48em) {
+  .carousel-tab--slide {
+    padding: 5rem 3rem;
+  }
+}

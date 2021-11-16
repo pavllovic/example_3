@@ -1,0 +1,23 @@
+@import './order-table--header.css';
+@import './order-table--cell.css';
+@import './order-table--row.css';
+@import './order-table--img.css';
+@import './order-table--label.css';
+@import './order-table--link.css';
+
+.order-table {
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 95%);
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.order-table thead {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .order-table thead {
+    display: block;
+  }
+}

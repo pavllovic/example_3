@@ -1,0 +1,57 @@
+@import './user-bar--item.css';
+
+.user-bar {
+  display: flex;
+  margin-right: -5px;
+}
+
+.user-bar .link {
+  transition-duration: 0.1s;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+
+/* icon container */
+.user-bar .link--icon {
+  height: 2.8rem;
+}
+
+/* icon background */
+.user-bar .link--icon::before {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 3.4rem;
+  height: 3.4rem;
+  background-color: hsl(0, 0%, 94%);
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  transform: scale(0.8, 0.8);
+  transition-duration: 0.15s, 0.15s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in, ease-in;
+}
+
+/* icon */
+.user-bar .link--icon svg {
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 1px;
+  transition-duration: 0.1s;
+  transition-property: fill;
+  transition-timing-function: ease;
+}
+
+.user-bar--item_current .link--icon svg {
+  fill: #000;
+}
+
+.user-bar .link:hover .link--icon::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.user-bar .link:active {
+  transform: scale(0.8, 0.8);
+}

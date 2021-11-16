@@ -1,0 +1,42 @@
+@import './common.css';
+@import '../components/breadcrumbs/breadcrumbs.css';
+@import '../components/grid-card/grid-card.css';
+@import '../components/card/card.css';
+@import '../components/menu-action/menu-action.css';
+
+.catalog-controls,
+.wrap-catalog .grid-card {
+  margin-top: 2rem;
+}
+
+.wrap-catalog .grid-card {
+  margin-bottom: 5rem;
+}
+
+.catalog-controls {
+  display: flex;
+}
+
+.catalog-controls .menu-action {
+  margin-left: auto;
+}
+
+.catalog-controls .menu-action [role='menu'] {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.catalog-controls .menu-action [aria-controls] {
+  margin-right: -10px;
+}
+
+@media (min-width: 87.5em) {
+  .catalog-controls,
+  .wrap-catalog .grid-card {
+    margin-top: 3rem;
+  }
+
+  .wrap-catalog .grid-card {
+    margin-bottom: 7rem;
+  }
+}

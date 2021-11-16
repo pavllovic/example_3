@@ -1,0 +1,20 @@
+mixin product(product)
+  include ../icon/icon.pug
+  include ../form/form-product/form-product.pug
+  section(class='product')
+    h2(class='product--header') #{product.name}
+    p(class='product--category') #{product.category}
+    div(class='product--rating')
+      span(class='visually-hidden') оценка #{product.rating} из 5
+      - for(var x = 0; x < product.rating; x++)
+        span(class='product--rating-icon product--rating-icon_plus')
+          +icon('star')
+      - for(var x = 0; x < (5 - product.rating); x++)
+        span(class='product--rating-icon')
+          +icon('star')
+    +form-product(product)
+    sectionp(class='product--descript')
+      h3(class='product--subheading') Описание
+      - var descript = require(`BD/product/${product.num}/descript.md`);
+      != descript
+      

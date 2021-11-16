@@ -1,0 +1,11 @@
+.product--rating {
+  display: flex;
+  order: -1;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 48em) {
+  .product--rating {
+    margin-bottom: 1.5rem;
+  }
+}

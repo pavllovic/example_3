@@ -1,0 +1,15 @@
+form(class='form-message' name='form-message' action='' method='POST' enctype='multipart/form-data')
+  label(class='form--label' for='form-message--name') 
+    span(class='form--label-text') Ваше имя
+    input(class='form--input' type='text' id='form-message--name' name='name')
+  label(class='form--label' for='form-message--email') 
+    span(class='form--label-text') Ващ e-mail
+    input(class='form--input' type='text' id='form-message--email' name='email')
+  label(class='form--label' for='form-message--message') 
+    span(class='form--label-text') Сообщение
+    textarea(class='form--textarea' type='text' id='form-message--message' name='message')
+  div(class='form-message--bottom')
+    label(class='form--label_file' for='form-message--file')
+      span(class='btn btn_white') Прикрепить файл
+      input(type='file' id='form-message--file' name='file')
+    button(class='btn' type='submit') Отправить

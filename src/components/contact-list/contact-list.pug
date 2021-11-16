@@ -1,0 +1,14 @@
+include ../icon/icon.pug
+include ../link/link.pug
+
+ul(class='contact-list')
+  li(class='contact-list--item')
+    +link({href: 'tel:89648999119', icon: 'phone', ally: 'наш номер телефона.', text: '8 (964) 89 99 119'})
+  li(class='contact-list--item contact-list--item_mail')
+    +link({href: 'mailto:mebel_loft_anapa@mail.ru', icon: 'mail', ally: 'наша почта.', text: 'mebel_loft_anapa@mail.ru'})
+  li(class='contact-list--item contact-list--item_inst')
+    +link({href: '#', icon: 'inst', text: 'INSTAGRAM'})
+  li(class='contact-list--item contact-list--item_address')
+    address(class='contact-list--address').
+      Адрес: г. Анапа, Анапское шоссе, 30 Ж/К Черное море
+

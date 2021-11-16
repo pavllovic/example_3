@@ -1,0 +1,11 @@
+@import './carousel-tab--bottom.css';
+@import './carousel-tab--control.css';
+@import './carousel-tab--slide-list.css';
+@import './carousel-tab--slide.css';
+@import './carousel-tab--tablist.css';
+@import './carousel-tab--tab.css';
+
+.carousel-tab {
+  position: relative;
+  width: 100%;
+}

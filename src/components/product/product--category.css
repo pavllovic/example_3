@@ -1,0 +1,12 @@
+.product--category {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+@media (min-width: 48em) {
+  .product--category {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+  }
+}

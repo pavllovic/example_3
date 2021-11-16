@@ -1,0 +1,15 @@
+mixin product-info--meta(data)
+  - var n = Object.keys(data).length / 2
+  ul(class='product-info--meta')
+    each value, key in product_meta 
+      li(class=`product-info--meta-item ${ (n > 0)? 'product-info--meta-item_first' : ''}`)
+        - n = n - 1 
+        if key === 'Размер' || key === 'Спальное место'
+          span(class='product-info--meta-name') #{key}
+          span(class='product-info--meta-value') #{value.length} × #{value.width} × #{value.height} <span class='no-wrap'>(Дл. × Шир. × Выс.)</span>
+        else if key === 'Посадочное место'
+          span(class='product-info--meta-name') #{key}
+          span(class='product-info--meta-value') #{value.depth} × #{value.height}<span class='no-wrap'>(Глуб. × Выс.)</span>
+        else 
+          span(class='product-info--meta-name') #{key}
+          span(class='product-info--meta-value') #{value}

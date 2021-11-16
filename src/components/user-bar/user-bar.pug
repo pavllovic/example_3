@@ -1,0 +1,9 @@
+include ../icon/icon.pug
+include ../link/link.pug
+ul(class='user-bar')
+  li(class=`user-bar--item ${current_page === 'wishlist' ? 'user-bar--item_current' : ''}`)
+    +link({href: './catalog.html', icon:'wishlist', ally: 'Избранное'})
+  li(class=`user-bar--item ${current_page === 'cart' ? 'user-bar--item_current' : ''}`)
+    +link({href: './cart.html', icon:'cart', ally: 'Корзина'})
+  li(class=`user-bar--item ${current_page === 'accaunt' ? 'user-bar--item_current' : ''}`)
+    +link({href: './accaunt.html', icon:'profile', ally: 'Личный кабинет'})

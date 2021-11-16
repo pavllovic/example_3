@@ -1,0 +1,5 @@
+mixin order--btn-remove(item)
+  include ../../icon/icon.pug
+  button(class='order--btn-remove' type='button' data-order=`order-${item}`)
+    span(class='visually-hidden') удалить заказ
+    +icon('cross')

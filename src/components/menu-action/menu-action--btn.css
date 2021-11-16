@@ -1,0 +1,10 @@
+.menu-action [aria-controls] {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}

@@ -1,0 +1,24 @@
+.product--rating-icon {
+  margin-right: 0.15rem;
+}
+
+.product--rating-icon svg {
+  display: block;
+  width: 0.8rem;
+  height: auto;
+  fill: hsl(0, 0%, 82%);
+}
+
+.product--rating-icon_plus svg {
+  fill: var(--color-black);
+}
+
+@media (min-width: 48em) {
+  .product--rating-icon {
+    margin-right: 0.3rem;
+  }
+
+  .product--rating-icon svg {
+    width: 1.5rem;
+  }
+}

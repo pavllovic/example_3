@@ -1,0 +1,22 @@
+@import './search-bar--input.css';
+@import './search-bar--icon.css';
+
+.search-bar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  order: 1;
+  margin-top: 1rem;
+}
+
+@media (min-width: 48em) {
+  .search-bar {
+    width: auto;
+    flex-grow: 1;
+    order: 0;
+    margin-top: 0;
+    margin-right: 32px;
+    margin-left: 40px;
+  }
+}

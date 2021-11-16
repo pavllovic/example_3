@@ -1,0 +1,17 @@
+.order--img {
+  width: 6.7rem;
+  height: auto;
+}
+
+.order--img img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+@media (min-width: 48em) {
+  .order--img {
+    width: 10rem;
+  }
+}
