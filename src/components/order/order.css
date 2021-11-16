@@ -15,7 +15,7 @@
   align-items: flex-start;
   padding: 1.5rem;
   padding-right: 3.8rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.575rem;
   box-shadow: var(--shadow-main);
   column-gap: 1.5rem;
   grid-template-columns: 6.7rem 1fr;

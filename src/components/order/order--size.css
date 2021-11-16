@@ -1,8 +1,15 @@
 .order--size {
+  width: 100%;
   margin-bottom: 1rem;
   color: var(--color-text-gray);
   font-size: 1.1rem;
   line-height: 1.2;
+}
+
+@media (min-width: 35.5em) {
+  .order--size {
+    width: auto;
+  }
 }
 
 @media (min-width: 48em) {

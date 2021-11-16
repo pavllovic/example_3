@@ -8,6 +8,15 @@
   font-family: inherit;
   font-size: 1.3rem;
   line-height: 2rem;
+  transition-duration: 0.1s;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+
+.btn span {
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in;
 }
 
 .btn_white {
@@ -39,23 +48,28 @@
   box-shadow: 0 0 10px 0 hsla(0, 0%, 0%, 0.07);
 }
 
-.btn:hover::before {
-  opacity: 1;
-  transform: scale(1.015, 1.025);
+@media (hover: hover) {
+  .btn:hover::before {
+    opacity: 1;
+    transform: scale(1.015, 1.025);
+  }
+
+  .form--label_file:hover .btn_white::before {
+    opacity: 1;
+    transform: scale(1.03, 1.1);
+  }
 }
 
-.btn:active::before {
-  transform: scale(1, 1);
-  transition-duration: 0.1s, 0.1s;
+.btn:active {
+  transform: scale(0.985, 0.975);
 }
 
-.form--label_file:hover .btn_white::before {
-  opacity: 1;
-  transform: scale(1.03, 1.1);
-}
-
-.form--label_file:active .btn_white::before {
+.btn:active span {
   opacity: 0.5;
-  transform: scale(1, 1);
+}
+
+.form--label_file:active .btn_white {
+  opacity: 0.5;
+  transform: scale(0.97, 0.9);
   transition-duration: 0.1s, 0.1s;
 }

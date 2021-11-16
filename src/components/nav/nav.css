@@ -44,9 +44,18 @@
 
   .nav .menu-page .link--icon,
   .nav .menu-category .link--icon {
+    width: auto;
     height: 1.4rem;
     padding: 0;
     margin: 0;
+    box-shadow: none;
+  }
+
+  .nav .menu-page .link--icon svg,
+  .nav .menu-category .link--icon svg {
+    display: flex;
+    width: auto;
+    height: 100%;
   }
 
   .nav .menu-page .link--txt,

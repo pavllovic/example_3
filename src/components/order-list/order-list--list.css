@@ -6,13 +6,31 @@
   margin-bottom: 2.5rem;
 }
 
+.order-list--list ~ .btn {
+  transition-duration: 0s;
+  transition-property: none;
+}
+
+.order-list_remove .order-list--list ~ * {
+  transform: translateY(-13.5rem);
+  transition-delay: 0.15s;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+
+@media (min-width: 35.5em) {
+  .order-list_remove .order-list--list ~ * {
+    transform: translateY(-11.2rem);
+  }
+}
+
 @media (min-width: 48em) {
   .order-list--list {
     margin-bottom: 3.5rem;
   }
-}
 
-.order-list_remove .order-list--list ~ * {
-  transform: translateY(-139px);
-  transition: transform 0.15s ease-in 0.15s;
+  .order-list_remove .order-list--list ~ * {
+    transform: translateY(-13.9rem);
+  }
 }

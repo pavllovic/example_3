@@ -13,8 +13,20 @@
 }
 
 .order-list_remove .order-list ~ * {
-  transform: translateY(-139px);
+  transform: translateY(-13.5rem);
   transition: transform 0.15s ease-in 0.15s;
+}
+
+@media (min-width: 35.5em) {
+  .order-list_remove .order-list ~ * {
+    transform: translateY(-11.2rem);
+  }
+}
+
+@media (min-width: 48em) {
+  .order-list_remove .order-list ~ * {
+    transform: translateY(-13.9rem);
+  }
 }
 
 /* footer {

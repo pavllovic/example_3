@@ -42,21 +42,23 @@
   transform: scale(0.8, 0.8);
 }
 
-.btn-like:hover .btn-like--icon::before {
-  opacity: 0.4;
-  transform: scale(1, 1);
-}
-
 .btn-like:active .btn-like--icon::before {
   opacity: 0.4;
   transform: scale(0, 0);
 }
 
-.btn-like:hover .btn-like--icon svg {
-  stroke: var(--color-accent);
-}
-
 .btn-like:active .btn-like--icon svg {
   fill: hsl(0, 100%, 73%);
   stroke: var(--color-accent);
+}
+
+@media (hover: hover) {
+  .btn-like:hover .btn-like--icon::before {
+    opacity: 0.4;
+    transform: scale(1, 1);
+  }
+
+  .btn-like:hover .btn-like--icon svg {
+    stroke: var(--color-accent);
+  }
 }
