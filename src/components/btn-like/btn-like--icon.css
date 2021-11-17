@@ -6,8 +6,6 @@
   transition-duration: 0.25s;
   transition-property: transform;
   transition-timing-function: ease;
-
-  /* padding: 5px; */
 }
 
 .btn-like--icon::before {
