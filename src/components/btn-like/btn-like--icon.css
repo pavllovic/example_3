@@ -3,7 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  transition-duration: 0.25s;
+  transition-property: transform;
+  transition-timing-function: ease;
+
+  /* padding: 5px; */
 }
 
 .btn-like--icon::before {
@@ -25,6 +29,7 @@
 .btn-like--icon svg {
   width: auto;
   height: 100%;
+  margin: 5px;
   fill: transparent;
   stroke: #000;
   stroke-width: 1;
@@ -36,6 +41,17 @@
 .btn-like[aria-pressed=true] .btn-like--icon svg {
   fill: hsl(0, 100%, 73%);
   stroke: var(--color-accent);
+}
+
+@media (hover: hover) {
+  .btn-like:hover .btn-like--icon::before {
+    opacity: 0.4;
+    transform: scale(1, 1);
+  }
+
+  .btn-like:hover .btn-like--icon svg {
+    stroke: var(--color-accent);
+  }
 }
 
 .btn-like:active .btn-like--icon {
@@ -50,15 +66,4 @@
 .btn-like:active .btn-like--icon svg {
   fill: hsl(0, 100%, 73%);
   stroke: var(--color-accent);
-}
-
-@media (hover: hover) {
-  .btn-like:hover .btn-like--icon::before {
-    opacity: 0.4;
-    transform: scale(1, 1);
-  }
-
-  .btn-like:hover .btn-like--icon svg {
-    stroke: var(--color-accent);
-  }
 }

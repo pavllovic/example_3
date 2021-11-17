@@ -6,3 +6,8 @@
   fill: none;
   stroke: var(--color-black);
 }
+
+.search-bar--icon svg {
+  width: auto;
+  height: 100%;
+}
