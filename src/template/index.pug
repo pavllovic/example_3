@@ -1,16 +1,8 @@
 extends ./layout/base.pug
 
-//- block preload
-//-   link(rel="preload" as='image' 
-//-       href=require('Images/carousel-hero/1-1140w.webp').default
-//-       imagesrcset=`${require('Images/carousel-hero/1-440w.webp').default} 440w,
-//-                   ${require('Images/carousel-hero/1-680w.webp').default} 680w,
-//-                   ${require('Images/carousel-hero/1-1140w.webp').default} 1140w,
-//-                   ${require('Images/carousel-hero/1-2280w.webp').default} 2280w`
-//-       imagesizes='(min-width: 1200px) 1140px, calc(100vw - var(--layout-h-space) * 2)')
-
 block preload
   link(rel="preload" as='image' 
+      href=require('Images/carousel-hero/1-1140w.webp').default
       imagesrcset=`${require('Images/carousel-hero/1-440w.webp').default} 440w,
                   ${require('Images/carousel-hero/1-680w.webp').default} 680w,
                   ${require('Images/carousel-hero/1-1140w.webp').default} 1140w,

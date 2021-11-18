@@ -1,14 +1,7 @@
 extends ./layout/base.pug
 
-//- block preload
-//-   link(rel="preload" as='image' href=require('Images/about/hero-633w.webp').default
-//-       imagesrcset=`${require('Images/about/hero-317w.webp').default} 317w,
-//-                    ${require('Images/about/hero-633w.webp').default} 633w,
-//-                    ${require('Images/about/hero-1266w.webp').default} 1266w`
-//-       imagesizes='(max-width: 425px) 317px, 633px')
-
 block preload
-  link(rel="preload" as='image' 
+  link(rel="preload" as='image' href=require('Images/about/hero-633w.webp').default
       imagesrcset=`${require('Images/about/hero-317w.webp').default} 317w,
                    ${require('Images/about/hero-633w.webp').default} 633w,
                    ${require('Images/about/hero-1266w.webp').default} 1266w`

@@ -7,4 +7,4 @@ mixin menu-action_sort(id, links, btn_text)
         +icon('menu')
     div(id=`${id}--menu` tabindex='0' role='menu' aria-hidden='true' aria-labelledby=`${id}--btn` aria-activedescendant)
       each link in links
-        btn(id=`${id}--link-${link.id}` role='menuitem') #{link.text}
+        button(id=`${id}--link-${link.id}` role='menuitem') #{link.text}

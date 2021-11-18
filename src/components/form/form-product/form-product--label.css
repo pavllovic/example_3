@@ -9,7 +9,7 @@
   margin-right: 4.5rem;
 }
 
-.form-product--label span {
+.form-product--label .form-product--label-txt {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   line-height: 1.2;

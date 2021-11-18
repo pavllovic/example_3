@@ -9,11 +9,11 @@ mixin form-product(product)
     include ../../btn-like/btn-like.pug
     fieldset(class='form-product--controls')
       label(class='form-product--label') 
-        span Цвет
+        span(class='form-product--label-txt') Цвет
         +combobox-color(product.color, 'color', 'product-color')
       label(class='form-product--label') 
-        span Количество
+        span(class='form-product--label-txt') Количество
         +combobox([1,2,3,4], 'count', 'product-count')
       label(class='form-product--label') 
-        span Размер (Д × Ш × В)
+        span(class='form-product--label-txt') Размер (Д × Ш × В)
         +combobox-size(product.size, 'size', 'product-size')

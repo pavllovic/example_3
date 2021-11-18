@@ -1,12 +1,12 @@
 mixin combobox(options, id, name)
-  p(class=`combobox combobox-${id}`)
+  span(class=`combobox combobox-${id}`)
     input(class='visually-hidden' name=`${name}` aria-hidden='true' tabindex='-1' placeholder=' ' required value=`${options[0]}`)
-    p(class='combobox--input' tabindex='0' role='combobox'
+    span(class='combobox--input' tabindex='0' role='combobox'
         aria-controls=`${id}-options` 
         aria-haspopup='listbox' 
         aria-expanded='false' 
         aria-label=`${name}`
         aria-autocomplete='none') #{options[0]}
-    p(class='combobox--options' id=`${id}-options` role='listbox')
+    span(class='combobox--options' id=`${id}-options` role='listbox')
       each option, index in options
-        p(class='combobox--item' id=`${id}-${index}` role='option' aria-selected='false') #{option}
+        span(class='combobox--item' id=`${id}-${index}` role='option' aria-selected='false') #{option}
