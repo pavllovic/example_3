@@ -2,7 +2,7 @@ mixin order(product, order)
   include ../icon/icon.pug
   include ./order--btn-remove/order--btn-remove.pug
   div(class='order' id=`order-${order.item}` data-order-price=`${product.price}`)
-    div(class='order--img')
+    picture(class='order--img')
       source(srcset=`${require(`Images/product/${product.num}/preview/1-200w.webp`).default} 200w,
                      ${require(`Images/product/${product.num}/preview/1-400w.webp`).default} 400w`
             sizes='100px'

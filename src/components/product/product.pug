@@ -13,7 +13,7 @@ mixin product(product)
         span(class='product--rating-icon')
           +icon('star')
     +form-product(product)
-    sectionp(class='product--descript')
+    section(class='product--descript')
       h3(class='product--subheading') Описание
       - var descript = require(`BD/product/${product.num}/descript.md`);
       != descript

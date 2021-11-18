@@ -1,13 +1,13 @@
 mixin combobox-color(options, id, name)
-  div(class=`combobox combobox-${id}`)
+  p(class=`combobox combobox-${id}`)
     input(class='visually-hidden' name=`${name}` aria-hidden='true' tabindex='-1' placeholder=' ' required value=`${options[0].name}`)
-    div(class='combobox--input' tabindex='0' role='combobox' data-combobox='color'
+    p(class='combobox--input' tabindex='0' role='combobox' data-combobox='color'
         aria-controls=`${id}-options` 
         aria-haspopup='listbox' 
         aria-expanded='false' 
-        aria-labelledby=`${id}` 
+        aria-label=`${name}` 
         aria-autocomplete='none'
         style=`--bg-color:${options[0].value}`) #{options[0].name}
-    div(class='combobox--options' id=`${id}-options` role='listbox')
+    p(class='combobox--options' id=`${id}-options` role='listbox')
       each option, index in options
-        div(class='combobox--item' id=`${id}-${index}` role='option' aria-selected='false' style=`--bg-color:${option.value}`) #{option.name}
+        p(class='combobox--item' id=`${id}-${index}` role='option' aria-selected='false' style=`--bg-color:${option.value}`) #{option.name}

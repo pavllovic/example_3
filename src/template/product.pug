@@ -1,7 +1,14 @@
 extends ./layout/base.pug
 
+//- block preload
+//-   link(rel="preload" as='image' href=require(`Images/product/${7}/slide/1-663w.jpg`).default
+//-       imagesrcset=`${require(`Images/product/${7}/slide/1-332w.jpg`).default} 332w,
+//-                   ${require(`Images/product/${7}/slide/1-663w.jpg`).default} 663w,
+//-                   ${require(`Images/product/${7}/slide/1-1326w.jpg`).default} 1326w`
+//-       imagesizes='(min-width: 720px) 663px , calc(100vw - var(--layout-h-space) * 2 - 2.4rem)')
+
 block preload
-  link(rel="preload" as='image' href=require(`Images/product/${7}/slide/1-663w.jpg`).default
+  link(rel="preload" as='image' 
       imagesrcset=`${require(`Images/product/${7}/slide/1-332w.jpg`).default} 332w,
                   ${require(`Images/product/${7}/slide/1-663w.jpg`).default} 663w,
                   ${require(`Images/product/${7}/slide/1-1326w.jpg`).default} 1326w`

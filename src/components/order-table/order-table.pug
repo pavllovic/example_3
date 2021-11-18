@@ -14,7 +14,7 @@ mixin order-table(orders)
             - var product = require(`BD/product/${order.product}/preview.json`)
             th(class='order-table--cell order-table--cell_name' scope='row')
               picture
-                source(src=require(`Images/product/${order.product}/preview/1-200w.webp`).default type='image/webp')
+                source(srcset=require(`Images/product/${order.product}/preview/1-200w.webp`).default type='image/webp')
                 img(class='order-table--img' src=require(`Images/product/${order.product}/preview/1-200w.jpg`).default width='40' height='30' alt=`${product.alt}.`)
               span #{order.name}
             td(class='order-table--cell') <span class='order-table--label'>Цена:</span> #{order.price} 
