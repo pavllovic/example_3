@@ -4,6 +4,7 @@
 
 .form-person {
   display: grid;
+  overflow: hidden;
   width: 100%;
   align-items: flex-end;
   grid-gap: 1rem;

@@ -12,6 +12,6 @@ gridOffer.init();
 btnLike.init();
 orderList.init();
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }

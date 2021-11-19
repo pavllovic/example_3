@@ -4,3 +4,7 @@ const form = document.querySelector('[name="form-person"]');
 const formMessage = new FormMessage(form);
 
 formMessage.init();
+
+// if (module.hot) {
+//   module.hot.accept();
+// }

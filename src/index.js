@@ -10,3 +10,7 @@ const btnLike = new BtnLike(grid);
 carousel.init();
 gridCard.init();
 btnLike.init();
+
+// if (module.hot) {
+//   module.hot.accept();
+// }

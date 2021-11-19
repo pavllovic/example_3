@@ -10,3 +10,7 @@ const btnLike = new BtnLike(grid);
 gridCard.init();
 menuSort.init();
 btnLike.init();
+
+// if (module.hot) {
+//   module.hot.accept();
+// }

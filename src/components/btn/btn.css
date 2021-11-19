@@ -51,17 +51,19 @@
 @media (hover: hover) {
   .btn:hover::before {
     opacity: 1;
-    transform: scale(1.015, 1.025);
+
+    /* transform: scale(1.015, 1.025); */
   }
 
   .form--label_file:hover .btn_white::before {
     opacity: 1;
-    transform: scale(1.03, 1.1);
+
+    /* transform: scale(1.03, 1.1); */
   }
 }
 
 .btn:active {
-  transform: scale(0.985, 0.975);
+  transform: scale(0.975, 0.965);
 }
 
 .btn:active span {
