@@ -8,12 +8,18 @@ ComboboxColor.prototype = {
   toogleOptions: lib.toogleOptions,
   openOptions: lib.openOptions,
   closeOptions: lib.closeOptions,
-  resetCombobox: lib.resetCombobox,
-  onOptionChecked: function(e) {
-    lib.onOptionChecked.call(this, e);
-    const option = this.arrayOptions[this.optionSelectedIndex];
+  setColor(index) {
+    const option = this.arrayOptions[index];
     const color = option.style.getPropertyValue('--bg-color');
     this.combobox.style.setProperty('--bg-color', color);
+  },
+  resetCombobox() {
+    lib.resetCombobox.call(this);
+    this.setColor(0);
+  },
+  onOptionChecked: function(e) {
+    lib.onOptionChecked.call(this, e);
+    this.setColor(this.optionSelectedIndex);
   },
   onKeydown: lib.onKeydown,
   onComboboxBlur: lib.onComboboxBlur,

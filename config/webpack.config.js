@@ -9,12 +9,12 @@ const isDev = process.env.NODE_ENV === 'development';
 const es6 = process.env.es6 === 'true';
 
 const entry = {  
-  common: ['./src/common.js'],
+  common: ['./src/common.js', './src/css/common.css'],
   index: ['./src/index.js', './src/css/index.css'],
   cart: ['./src/cart.js', './src/css/cart.css'],
   contact: ['./src/contact.js', './src/css/contact.css'],
   product: ['./src/product.js', './src/css/product.css'],
-  about: ['./src/about.js', './src/css/about.css'],
+  about: ['./src/css/about.css'],
   accaunt: ['./src/accaunt.js', './src/css/accaunt.css'],
   catalog: ['./src/catalog.js', './src/css/catalog.css'],
 }
@@ -58,8 +58,8 @@ const makeConfig = () => {
         arr = arr.concat([
           plugins.babelEsmPlugin,
           plugins.scriptExtHtmlWebpackPlugin,
-          // plugins.ignoreEmitPlugin,
-          // plugins.htmlWebpackSkipAssetsPlugin,
+          plugins.ignoreEmitPlugin,
+          plugins.htmlWebpackSkipAssetsPlugin,
         ]);
       }
 

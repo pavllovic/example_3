@@ -52,8 +52,8 @@ export function closeOptions() {
 
 export function resetCombobox() {
   this.combobox.setAttribute('aria-activedescendant', '');
-  this.combobox.textContent = '';
-  this.input.value = '';
+  this.combobox.textContent = this.arrayOptions[0].textContent;
+  this.input.setAttribute('value', this.arrayOptions[0].textContent);
   this.arrayOptions[this.optionSelectedIndex].setAttribute('aria-selected', 'false');
   this.arrayOptions[this.optionFocusedIndex].classList.remove('is-focus');
   this.optionSelectedIndex = 0;
@@ -69,7 +69,7 @@ export function onOptionChecked(e) {
   if(option) {
     option.setAttribute('aria-selected', 'true');
     this.combobox.textContent = option.textContent;
-    this.input.value = option.textContent;
+    this.input.setAttribute('value', option.textContent);
 
     if(typeof window.CustomEvent === 'function') {
       // modern

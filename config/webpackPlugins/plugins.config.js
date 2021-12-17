@@ -2,6 +2,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlagin = require('html-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin');
+const HtmlWebpackSkipAssetsPlugin = require('html-webpack-skip-assets-plugin').HtmlWebpackSkipAssetsPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -32,6 +34,16 @@ const scriptExtHtmlWebpackPlugin = new ScriptExtHtmlWebpackPlugin({
 const babelEsmPlugin = new BabelEsmPlugin({
   filename: isDev? 'js/modern/es6.[name].js' : 'js/modern/[contenthash].es6.[name].js',
   chunkFilename: isDev? 'js/modern/es6.[name].js' :'js/modern/[contenthash].es6.[name].js',
+});
+
+const ignoreEmitPlugin = new IgnoreEmitPlugin([
+  /(about)\.style\.js$/, /(about)\.js$/
+]);
+
+const htmlWebpackSkipAssetsPlugin = new HtmlWebpackSkipAssetsPlugin({
+  excludeAssets: [
+    /(about)\.style\.js$/, /(about)\.js$/
+  ]
 });
 
 const htmlWebpackPlagin = [
@@ -148,6 +160,9 @@ const miniCssExtractPlugin = new MiniCssExtractPlugin({
 })
 
 module.exports = {
+  ignoreEmitPlugin: ignoreEmitPlugin,
+  htmlWebpackSkipAssetsPlugin: htmlWebpackSkipAssetsPlugin,
+  scriptExtHtmlWebpackPlugin: scriptExtHtmlWebpackPlugin,
   miniCssExtractPlugin: miniCssExtractPlugin,
   htmlWebpackPlagin: htmlWebpackPlagin,
   stylelintPlugin: stylelintPlugin,
@@ -155,5 +170,4 @@ module.exports = {
   cleanWebpackPlugin: cleanWebpackPlugin,
   compressionPlugin: compressionPlugin,
   babelEsmPlugin: babelEsmPlugin,
-  scriptExtHtmlWebpackPlugin: scriptExtHtmlWebpackPlugin, 
 };

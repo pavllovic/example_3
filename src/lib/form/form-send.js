@@ -34,19 +34,15 @@ export async function sendFormJSON(form, data) {
   const method = form.getAttribute('method');
   const enctype = form.getAttribute('enctype');
 
-  console.log(objData);
-
   const options = {
     method: method || 'POST',
     credentials: 'same-origin',
-    // mode: 'no-cors',
     body: JSON.stringify(objData),
     headers: {
       'Content-Type': enctype,
       // 'Content-Type': 'text/plain',
       // 'Content-Type': 'application/x-www-form-urlencoded',
       // 'Content-Type': 'application/json',
-      // 'Access-Control-Allow-Origin': '*',
     },
   };
 

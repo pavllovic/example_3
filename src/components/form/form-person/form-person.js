@@ -2,10 +2,10 @@ import * as lib from 'Lib/form/form.js';
 import { sendFormHandler } from 'Lib/form/form-handlers.js';
 import { sendFormJSON } from 'Lib/form/form-send.js';
 
-const FormMessage = lib.form;
+const FormPerson = lib.form;
 
-FormMessage.prototype = {
-  constructor: FormMessage,
+FormPerson.prototype = {
+  constructor: FormPerson,
   init: lib.init,
   setListeners: lib.setListeners,
   destroy: lib.destroy,
@@ -14,16 +14,20 @@ FormMessage.prototype = {
   sendForm: sendFormJSON,
   submitForm: lib.submitForm,
   sendFormHandler: sendFormHandler,
+  updateFormValue() {
+    const data = this.getFormData();
+    data.forEach((value, name) => {
+      this.form.elements[name].setAttribute('value', value);
+    });
+  },
   onSuccessHandler(res) {
     console.log(res);
-    this.resetForm();
+    this.updateFormValue();
   },
   onErrorHandler(err) {
     console.log(err);
-    this.resetForm();
   },
-  // onErrorHandler: handlers.onErrorHandler,
   handleEvent: lib.handleEvent,
 };
 
-export default FormMessage;
+export default FormPerson;

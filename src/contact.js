@@ -1,9 +1,9 @@
-import Form from 'Components/form/form.js';
+import FormMessage from 'Components/form/form-message/form-message.js';
 
 const form = document.querySelector('[name="form-message"]');
-const formPerson = new Form(form);
+const formMessage = new FormMessage(form);
 
-formPerson.init();
+formMessage.init();
 
 // if (module.hot) {
 //   module.hot.accept();
